@@ -1,0 +1,3 @@
+round,seconds,benign_n,benign_scored_n,benign_flagged,benign_rate,benign_mean_weight,heterogeneous_n,heterogeneous_scored_n,heterogeneous_flagged,heterogeneous_rate,heterogeneous_mean_weight,malicious_n,malicious_scored_n,malicious_flagged,malicious_rate,malicious_mean_weight,auc,heterogeneous_weight_ratio,validation_sst2_accuracy,validation_imdb_accuracy,svd_relative_error
+1,29.494911765679717,2,2,1,0.5,0.3979402126936544,1,1,0,0.0,0.20411957461269103,0,0,0,,,,0.5129403063616192,0.8125,0.875,0.001253868328843264
+2,29.126853791065514,2,2,1,0.5,0.09961716885265787,1,1,0,0.0,0.8007656622946842,0,0,0,,,,8.03843023765395,0.875,0.875,0.0016254633963459421

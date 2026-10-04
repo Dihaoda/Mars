@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "config": {
+    "seed": 2026,
+    "model": {
+      "backend": "qwen",
+      "name": "Qwen/Qwen2.5-0.5B",
+      "revision": "main",
+      "rank": 4,
+      "alpha": 8,
+      "dropout": 0.0,
+      "max_length": 256,
+      "targets": [
+        "q_proj",
+        "v_proj"
+      ],
+      "dtype": "bfloat16"
+    },
+    "data": {
+      "kind": "hf",
+      "seed": 42,
+      "clients": 20,
+      "heterogeneous_clients": 5,
+      "samples_per_client": 32,
+      "mix_ratio": 0.4,
+      "root_per_domain": 32,
+      "validation_per_domain": 16,
+      "test_per_domain": 32,
+      "root_domains": [
+        "sst2"
+      ],
+      "revisions": {
+        "sst2": "main",
+        "imdb": "main"
+      }
+    },
+    "train": {
+      "rounds": 2,
+      "clients_per_round": 3,
+      "local_epochs": 1,
+      "batch_size": 2,
+      "gradient_accumulation": 2,
+      "learning_rate": 0.0002,
+      "weight_decay": 0.0,
+      "max_grad_norm": 1.0,
+      "max_steps": 2
+    },
+    "defense": {
+      "name": "hfedsa",
+      "representation": "effective",
+      "beta": 0.2,
+      "gmm_reg": 0.0001,
+      "threshold": 0.5,
+      "clip_factor": 2.0,
+      "anchor_repeats": 2,
+      "anchor_steps": 2,
+      "anchor_fraction": 0.8,
+      "anchor_trigger": "remarkable sapphire",
+      "anchor_match_min": 0.0,
+      "probe_entropy": 0.7,
+      "audit_fraction": 0.1
+    },
+    "aggregation": {
+      "mode": "effective",
+      "normalize": "none"
+    },
+    "attack": {
+      "name": "none",
+      "malicious_fraction": 0.0,
+      "poison_fraction": 0.2,
+      "target_label": 1,
+      "trigger": "quiet amber",
+      "scale": 5.0
+    },
+    "runtime": {
+      "device": "cuda",
+      "threads": 2,
+      "cache_updates": true,
+      "deterministic": true
+    }
+  },
+  "config_hash": "15957b0339b0c4d742052ae272e260a403f913c5c7c286d612eeca3d556087d5",
+  "source_hash": "c2932824d70c0501534e28781cd7ed8e83125580dce96c733bf643a8ef7b53bd",
+  "data_hash": "73d8f60730912319c8c0bd498073296ad93cf1a5b6459c3df7d12374f02c3170",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "git_commit": "35f11845f5ec8f50beab67efa23272b852e515b8",
+  "environment": {
+    "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+    "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.52.4",
+      "peft": "0.15.2",
+      "datasets": "3.6.0",
+      "numpy": "1.26.4",
+      "scikit-learn": "1.6.1",
+      "accelerate": "1.7.0",
+      "huggingface-hub": "0.33.0"
+    },
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "synthetic": false,
+  "method_status": "Independent fixed-beta LoRA implementation; not an exact reproduction of H-FedSA or its DDPG controller.",
+  "reference_domains": [
+    "sst2"
+  ]
+}

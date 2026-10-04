@@ -1,0 +1,31 @@
+{
+  "purpose": "Real-model integration and resource smoke test; not evidence of method effectiveness",
+  "date": "2026-10-04",
+  "exit_code": 0,
+  "server_tests_passed": 25,
+  "package_consistency_check": "passed",
+  "model_forward_backward_adapter_restore": "passed",
+  "code_commit": "35f11845f5ec8f50beab67efa23272b852e515b8",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "model_safetensors_sha256": "88c142557820ccad55bb59756bfcfcf891de9cc6202816bd346445188a0ed342",
+  "data_hash": "73d8f60730912319c8c0bd498073296ad93cf1a5b6459c3df7d12374f02c3170",
+  "completed_rounds": 2,
+  "round_seconds": [
+    29.494911765679717,
+    29.126853791065514
+  ],
+  "total_round_seconds": 58.62176555674523,
+  "peak_allocated_gpu_memory_bytes": 2880385536,
+  "peak_allocated_gpu_memory_gib": 2.682568073272705,
+  "offline_replay_checks": [
+    "hfedsa raw-factor scoring",
+    "fltrust effective-update scoring"
+  ],
+  "limitations": [
+    "One seed, two rounds, three participating clients per round, at most two optimizer steps per client",
+    "No malicious clients; attack success and malicious recall are not measured",
+    "Round timings exclude first-time installation, model download, model loading and final test/export",
+    "CUDA memory is PyTorch allocated peak, not total device reserved memory",
+    "Client-round observations are repeated measurements, not independent statistical replicates"
+  ]
+}
