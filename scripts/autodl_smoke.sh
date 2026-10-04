@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
+if [[ -f /etc/network_turbo ]]; then
+  source /etc/network_turbo >/dev/null 2>&1
+fi
 export PYTHONNOUSERSITE=1
 export HF_HOME="${HF_HOME:-/root/autodl-tmp/mars-cache/huggingface}"
+export HF_HUB_DISABLE_XET=1
+export HF_HUB_DOWNLOAD_TIMEOUT="${HF_HUB_DOWNLOAD_TIMEOUT:-120}"
+export PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS=2
 export MKL_NUM_THREADS=2
 export CUBLAS_WORKSPACE_CONFIG=:4096:8

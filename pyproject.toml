@@ -7,7 +7,7 @@ name = "mars-fedlora"
 version = "0.1.0"
 description = "Reproducible single-GPU federated LoRA security experiments"
 requires-python = ">=3.10"
-dependencies = ["torch>=2.7,<2.9", "numpy==1.26.4", "PyYAML==6.0.2", "scikit-learn==1.6.1"]
+dependencies = ["torch>=2.7,<2.9", "numpy==1.26.4", "scipy>=1.10,<1.18", "PyYAML==6.0.2", "scikit-learn==1.6.1"]
 
 [project.optional-dependencies]
 llm = ["transformers==4.52.4", "peft==0.15.2", "datasets==3.6.0", "huggingface-hub==0.33.0", "accelerate==1.7.0", "safetensors==0.5.3"]
