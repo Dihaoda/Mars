@@ -1,0 +1,29 @@
+# Offline synthetic software test. Never a research result.
+model:
+  backend: tiny_qwen
+  rank: 2
+  alpha: 4
+  max_length: 48
+  dtype: float32
+data:
+  kind: synthetic
+  clients: 6
+  heterogeneous_clients: 2
+  samples_per_client: 8
+  root_per_domain: 8
+  validation_per_domain: 4
+  test_per_domain: 8
+  root_domains: [sst2, imdb]
+train:
+  rounds: 2
+  clients_per_round: 4
+  batch_size: 4
+  gradient_accumulation: 1
+  learning_rate: 0.01
+  max_steps: 2
+defense:
+  name: anchor_gmm
+  representation: effective
+  anchor_steps: 1
+runtime:
+  device: cpu

@@ -1,0 +1,3 @@
+# Independent reconstruction of the proposal's clean pilot, not an exact reproduction.
+# Unreported values (sample cap, LR, truncation, beta, aggregation) are explicit protocol choices.
+{}

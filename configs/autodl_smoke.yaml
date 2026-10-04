@@ -1,0 +1,17 @@
+# Real model/data loader and resource pilot; not a paper result.
+data:
+  samples_per_client: 32
+  root_per_domain: 32
+  validation_per_domain: 16
+  test_per_domain: 32
+train:
+  rounds: 2
+  clients_per_round: 3
+  batch_size: 2
+  gradient_accumulation: 2
+  max_steps: 2
+defense:
+  name: hfedsa
+  representation: effective
+runtime:
+  device: cuda

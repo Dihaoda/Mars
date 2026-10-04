@@ -1,0 +1,11 @@
+data:
+  root_domains: [sst2, imdb]
+defense:
+  name: anchor_gmm
+  representation: effective
+attack:
+  name: backdoor
+  malicious_fraction: 0.2
+  poison_fraction: 0.2
+  trigger: quiet amber
+  target_label: 1

@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-04",
+  "source_digest": "c2932824d70c0501534e28781cd7ed8e83125580dce96c733bf643a8ef7b53bd",
+  "platform": "Windows CPU, isolated Python virtual environment",
+  "python": "3.11.7",
+  "packages": {
+    "torch": "2.8.0+cpu",
+    "transformers": "4.52.4",
+    "peft": "0.15.2",
+    "datasets": "3.6.0",
+    "numpy": "1.26.4",
+    "scikit-learn": "1.6.1"
+  },
+  "tests": {
+    "passed": 25,
+    "failures": 0,
+    "errors": 0
+  },
+  "verified": [
+    "Low-rank algebra and gauge invariance",
+    "SVD discarded-energy error",
+    "Client optimizer/state isolation",
+    "Frozen base parameters",
+    "No test-label feedback into training",
+    "Exact CPU round-boundary resume",
+    "All six scoring methods",
+    "All three implemented attack training paths",
+    "CLI train/replay/CSV/JSON/PNG pipeline",
+    "Real SST-2 and IMDB download, partition and checksum",
+    "No broken package requirements"
+  ],
+  "real_data": {
+    "revisions": {
+      "sst2": "8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb",
+      "imdb": "e6281661ce1c48d982bc483cf8a173c1bbeb5d31"
+    },
+    "bundle_digest": "73d8f60730912319c8c0bd498073296ad93cf1a5b6459c3df7d12374f02c3170",
+    "clients": 20,
+    "samples_per_client": 32,
+    "duplicates_removed": 789
+  },
+  "pending": [
+    "AutoDL CUDA installation and real Qwen2.5-0.5B forward/backward",
+    "Two-round real-model resource pilot",
+    "Multi-seed scientific experiments"
+  ],
+  "limitations": [
+    "Synthetic checks are not evidence of defense effectiveness",
+    "H-FedSA is an independent fixed-beta migration, not original DDPG reproduction",
+    "Research novelty and robustness remain unvalidated"
+  ]
+}

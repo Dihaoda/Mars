@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+.env
+.env.*
+data/
+runs/
+cache/
+*.pt
+*.safetensors
+*.zip
+*.pem
+*private*
+id_rsa*
+id_ed25519*
