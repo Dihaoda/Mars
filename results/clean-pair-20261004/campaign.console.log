@@ -1,0 +1,339 @@
+round=1/10 seconds=138.41 validation={'sst2': 0.859375, 'imdb': 0.828125}
+{
+  "status": "paused",
+  "completed_rounds": 1,
+  "synthetic": false,
+  "pooled_client_round_detection": {
+    "benign_n": 6,
+    "benign_scored_n": 6,
+    "benign_flagged": 0,
+    "benign_rate": 0.0,
+    "benign_mean_weight": 0.15849197277855545,
+    "heterogeneous_n": 4,
+    "heterogeneous_scored_n": 4,
+    "heterogeneous_flagged": 3,
+    "heterogeneous_rate": 0.75,
+    "heterogeneous_mean_weight": 0.01226204083216682,
+    "malicious_n": 0,
+    "malicious_scored_n": 0,
+    "malicious_flagged": 0,
+    "malicious_rate": null,
+    "malicious_mean_weight": null,
+    "auc": null,
+    "heterogeneous_weight_ratio": 0.0773669518853129
+  },
+  "config_hash": "4b37e06269b0350afab1a63c54ebec91fcb7a79c3e8e2498563300d423c0b102",
+  "total_round_seconds": 138.41093568503857
+}
+START hfedsa-raw-none-mix0.4-seed2026
+round=2/10 seconds=135.99 validation={'sst2': 0.859375, 'imdb': 0.828125}
+round=3/10 seconds=140.14 validation={'sst2': 0.859375, 'imdb': 0.859375}
+round=4/10 seconds=139.54 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=5/10 seconds=138.66 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=6/10 seconds=137.14 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=7/10 seconds=137.95 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=8/10 seconds=136.41 validation={'sst2': 0.859375, 'imdb': 0.859375}
+round=9/10 seconds=136.85 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=10/10 seconds=139.13 validation={'sst2': 0.875, 'imdb': 0.859375}
+{
+  "status": "complete",
+  "completed_rounds": 10,
+  "synthetic": false,
+  "pooled_client_round_detection": {
+    "benign_n": 72,
+    "benign_scored_n": 72,
+    "benign_flagged": 12,
+    "benign_rate": 0.16666666666666666,
+    "benign_mean_weight": 0.11355700248430889,
+    "heterogeneous_n": 28,
+    "heterogeneous_scored_n": 28,
+    "heterogeneous_flagged": 13,
+    "heterogeneous_rate": 0.4642857142857143,
+    "heterogeneous_mean_weight": 0.06513913646891997,
+    "malicious_n": 0,
+    "malicious_scored_n": 0,
+    "malicious_flagged": 0,
+    "malicious_rate": null,
+    "malicious_mean_weight": null,
+    "auc": null,
+    "heterogeneous_weight_ratio": 0.5736250080916039
+  },
+  "config_hash": "4b37e06269b0350afab1a63c54ebec91fcb7a79c3e8e2498563300d423c0b102",
+  "total_round_seconds": 1380.2209886200726,
+  "test": {
+    "sst2": {
+      "n": 256,
+      "accuracy": 0.9375,
+      "loss": 0.10554144089292095
+    },
+    "imdb": {
+      "n": 256,
+      "accuracy": 0.92578125,
+      "loss": 0.09703258582158014
+    }
+  },
+  "test_macro_accuracy": 0.931640625,
+  "asr": null
+}
+COMPLETE hfedsa-raw-none-mix0.4-seed2026
+START hfedsa-effective-none-mix0.4-seed2026
+round=1/10 seconds=139.50 validation={'sst2': 0.875, 'imdb': 0.8125}
+round=2/10 seconds=138.54 validation={'sst2': 0.84375, 'imdb': 0.859375}
+round=3/10 seconds=137.87 validation={'sst2': 0.84375, 'imdb': 0.84375}
+round=4/10 seconds=137.72 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=5/10 seconds=138.14 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=6/10 seconds=138.88 validation={'sst2': 0.859375, 'imdb': 0.8125}
+round=7/10 seconds=139.01 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=8/10 seconds=138.65 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=9/10 seconds=133.59 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=10/10 seconds=138.92 validation={'sst2': 0.859375, 'imdb': 0.84375}
+{
+  "status": "complete",
+  "completed_rounds": 10,
+  "synthetic": false,
+  "pooled_client_round_detection": {
+    "benign_n": 72,
+    "benign_scored_n": 72,
+    "benign_flagged": 17,
+    "benign_rate": 0.2361111111111111,
+    "benign_mean_weight": 0.1087318954760425,
+    "heterogeneous_n": 28,
+    "heterogeneous_scored_n": 28,
+    "heterogeneous_flagged": 11,
+    "heterogeneous_rate": 0.39285714285714285,
+    "heterogeneous_mean_weight": 0.07754655449017646,
+    "malicious_n": 0,
+    "malicious_scored_n": 0,
+    "malicious_flagged": 0,
+    "malicious_rate": null,
+    "malicious_mean_weight": null,
+    "auc": null,
+    "heterogeneous_weight_ratio": 0.713190496226222
+  },
+  "config_hash": "4f0ba7c2e630b3fe93a987cfba8ab2cb958962b5dceefc06de1fc147b00331f7",
+  "total_round_seconds": 1380.8260289644822,
+  "test": {
+    "sst2": {
+      "n": 256,
+      "accuracy": 0.9375,
+      "loss": 0.1031419396858837
+    },
+    "imdb": {
+      "n": 256,
+      "accuracy": 0.92578125,
+      "loss": 0.09544668030139292
+    }
+  },
+  "test_macro_accuracy": 0.931640625,
+  "asr": null
+}
+COMPLETE hfedsa-effective-none-mix0.4-seed2026
+START hfedsa-raw-none-mix0.4-seed2027
+round=1/10 seconds=138.97 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=2/10 seconds=138.48 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=3/10 seconds=138.61 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=4/10 seconds=139.51 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=5/10 seconds=140.25 validation={'sst2': 0.859375, 'imdb': 0.875}
+round=6/10 seconds=137.52 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=7/10 seconds=136.77 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=8/10 seconds=139.47 validation={'sst2': 0.875, 'imdb': 0.859375}
+round=9/10 seconds=139.73 validation={'sst2': 0.859375, 'imdb': 0.859375}
+round=10/10 seconds=140.95 validation={'sst2': 0.859375, 'imdb': 0.875}
+{
+  "status": "complete",
+  "completed_rounds": 10,
+  "synthetic": false,
+  "pooled_client_round_detection": {
+    "benign_n": 76,
+    "benign_scored_n": 76,
+    "benign_flagged": 23,
+    "benign_rate": 0.3026315789473684,
+    "benign_mean_weight": 0.10012515071001205,
+    "heterogeneous_n": 24,
+    "heterogeneous_scored_n": 24,
+    "heterogeneous_flagged": 7,
+    "heterogeneous_rate": 0.2916666666666667,
+    "heterogeneous_mean_weight": 0.09960368941829517,
+    "malicious_n": 0,
+    "malicious_scored_n": 0,
+    "malicious_flagged": 0,
+    "malicious_rate": null,
+    "malicious_mean_weight": null,
+    "auc": null,
+    "heterogeneous_weight_ratio": 0.9947919050506385
+  },
+  "config_hash": "c8f8d6efdb7fff7b9414d9cf3967bdcd79c9eb187bf37e9dafa80d03c5ddc12a",
+  "total_round_seconds": 1390.2561973361298,
+  "test": {
+    "sst2": {
+      "n": 256,
+      "accuracy": 0.9375,
+      "loss": 0.10008598077547504
+    },
+    "imdb": {
+      "n": 256,
+      "accuracy": 0.91796875,
+      "loss": 0.09592736800550483
+    }
+  },
+  "test_macro_accuracy": 0.927734375,
+  "asr": null
+}
+COMPLETE hfedsa-raw-none-mix0.4-seed2027
+START hfedsa-effective-none-mix0.4-seed2027
+round=1/10 seconds=144.28 validation={'sst2': 0.859375, 'imdb': 0.796875}
+round=2/10 seconds=138.17 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=3/10 seconds=137.27 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=4/10 seconds=137.50 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=5/10 seconds=137.59 validation={'sst2': 0.875, 'imdb': 0.828125}
+round=6/10 seconds=137.44 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=7/10 seconds=137.67 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=8/10 seconds=138.75 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=9/10 seconds=138.48 validation={'sst2': 0.875, 'imdb': 0.828125}
+round=10/10 seconds=137.62 validation={'sst2': 0.859375, 'imdb': 0.828125}
+{
+  "status": "complete",
+  "completed_rounds": 10,
+  "synthetic": false,
+  "pooled_client_round_detection": {
+    "benign_n": 76,
+    "benign_scored_n": 76,
+    "benign_flagged": 16,
+    "benign_rate": 0.21052631578947367,
+    "benign_mean_weight": 0.1020212408787898,
+    "heterogeneous_n": 24,
+    "heterogeneous_scored_n": 24,
+    "heterogeneous_flagged": 6,
+    "heterogeneous_rate": 0.25,
+    "heterogeneous_mean_weight": 0.09359940388383232,
+    "malicious_n": 0,
+    "malicious_scored_n": 0,
+    "malicious_flagged": 0,
+    "malicious_rate": null,
+    "malicious_mean_weight": null,
+    "auc": null,
+    "heterogeneous_weight_ratio": 0.9174501611388617
+  },
+  "config_hash": "210fc6194dfd2c8f0d50dddeabf2f7916cc79c56b3f74cc8ea52f7d7a1d75344",
+  "total_round_seconds": 1384.7757153995335,
+  "test": {
+    "sst2": {
+      "n": 256,
+      "accuracy": 0.93359375,
+      "loss": 0.10321472456053016
+    },
+    "imdb": {
+      "n": 256,
+      "accuracy": 0.9140625,
+      "loss": 0.09979182022652822
+    }
+  },
+  "test_macro_accuracy": 0.923828125,
+  "asr": null
+}
+COMPLETE hfedsa-effective-none-mix0.4-seed2027
+START hfedsa-raw-none-mix0.4-seed2028
+round=1/10 seconds=133.80 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=2/10 seconds=132.07 validation={'sst2': 0.875, 'imdb': 0.84375}
+round=3/10 seconds=132.56 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=4/10 seconds=132.66 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=5/10 seconds=132.27 validation={'sst2': 0.859375, 'imdb': 0.828125}
+round=6/10 seconds=133.31 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=7/10 seconds=132.09 validation={'sst2': 0.859375, 'imdb': 0.859375}
+round=8/10 seconds=132.45 validation={'sst2': 0.859375, 'imdb': 0.859375}
+round=9/10 seconds=132.17 validation={'sst2': 0.859375, 'imdb': 0.859375}
+round=10/10 seconds=132.36 validation={'sst2': 0.859375, 'imdb': 0.84375}
+{
+  "status": "complete",
+  "completed_rounds": 10,
+  "synthetic": false,
+  "pooled_client_round_detection": {
+    "benign_n": 72,
+    "benign_scored_n": 72,
+    "benign_flagged": 17,
+    "benign_rate": 0.2361111111111111,
+    "benign_mean_weight": 0.11250624377357149,
+    "heterogeneous_n": 28,
+    "heterogeneous_scored_n": 28,
+    "heterogeneous_flagged": 11,
+    "heterogeneous_rate": 0.39285714285714285,
+    "heterogeneous_mean_weight": 0.06784108743938753,
+    "malicious_n": 0,
+    "malicious_scored_n": 0,
+    "malicious_flagged": 0,
+    "malicious_rate": null,
+    "malicious_mean_weight": null,
+    "auc": null,
+    "heterogeneous_weight_ratio": 0.602998421811358
+  },
+  "config_hash": "c751fcc2fe8acf770eb79664e34f0c1ccf636062e0672f182c1c8f911d862480",
+  "total_round_seconds": 1325.726123063825,
+  "test": {
+    "sst2": {
+      "n": 256,
+      "accuracy": 0.94140625,
+      "loss": 0.10864183353623957
+    },
+    "imdb": {
+      "n": 256,
+      "accuracy": 0.92578125,
+      "loss": 0.10047610361289117
+    }
+  },
+  "test_macro_accuracy": 0.93359375,
+  "asr": null
+}
+COMPLETE hfedsa-raw-none-mix0.4-seed2028
+START hfedsa-effective-none-mix0.4-seed2028
+round=1/10 seconds=133.73 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=2/10 seconds=131.10 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=3/10 seconds=135.43 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=4/10 seconds=134.22 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=5/10 seconds=134.41 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=6/10 seconds=137.68 validation={'sst2': 0.859375, 'imdb': 0.828125}
+round=7/10 seconds=138.64 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=8/10 seconds=139.55 validation={'sst2': 0.859375, 'imdb': 0.84375}
+round=9/10 seconds=139.78 validation={'sst2': 0.859375, 'imdb': 0.828125}
+round=10/10 seconds=139.57 validation={'sst2': 0.859375, 'imdb': 0.828125}
+{
+  "status": "complete",
+  "completed_rounds": 10,
+  "synthetic": false,
+  "pooled_client_round_detection": {
+    "benign_n": 72,
+    "benign_scored_n": 72,
+    "benign_flagged": 18,
+    "benign_rate": 0.25,
+    "benign_mean_weight": 0.11377296714063719,
+    "heterogeneous_n": 28,
+    "heterogeneous_scored_n": 28,
+    "heterogeneous_flagged": 10,
+    "heterogeneous_rate": 0.35714285714285715,
+    "heterogeneous_mean_weight": 0.06458379878121863,
+    "malicious_n": 0,
+    "malicious_scored_n": 0,
+    "malicious_flagged": 0,
+    "malicious_rate": null,
+    "malicious_mean_weight": null,
+    "auc": null,
+    "heterogeneous_weight_ratio": 0.5676550449931153
+  },
+  "config_hash": "710ebd9f9a83b62c94d163a8c5261c8939d4467329ec1ece236dab9ea34bedb3",
+  "total_round_seconds": 1364.1156803490594,
+  "test": {
+    "sst2": {
+      "n": 256,
+      "accuracy": 0.93359375,
+      "loss": 0.1089682467172679
+    },
+    "imdb": {
+      "n": 256,
+      "accuracy": 0.93359375,
+      "loss": 0.0978410795041782
+    }
+  },
+  "test_macro_accuracy": 0.93359375,
+  "asr": null
+}
+COMPLETE hfedsa-effective-none-mix0.4-seed2028
+ALL_SIX_COMPLETE

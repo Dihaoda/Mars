@@ -1,0 +1,281 @@
+{
+  "groups": [
+    {
+      "group": "03bf73d793235159d607963d7e641ba99d4cdfc618b46a27d439d7963b2d54cd",
+      "config": {
+        "model": {
+          "backend": "qwen",
+          "name": "Qwen/Qwen2.5-0.5B",
+          "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+          "rank": 4,
+          "alpha": 8,
+          "dropout": 0.0,
+          "max_length": 256,
+          "targets": [
+            "q_proj",
+            "v_proj"
+          ],
+          "dtype": "bfloat16"
+        },
+        "data": {
+          "kind": "hf",
+          "seed": 42,
+          "clients": 20,
+          "heterogeneous_clients": 5,
+          "samples_per_client": 500,
+          "mix_ratio": 0.4,
+          "root_per_domain": 128,
+          "validation_per_domain": 64,
+          "test_per_domain": 256,
+          "root_domains": [
+            "sst2"
+          ],
+          "revisions": {
+            "sst2": "8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb",
+            "imdb": "e6281661ce1c48d982bc483cf8a173c1bbeb5d31"
+          }
+        },
+        "train": {
+          "rounds": 10,
+          "clients_per_round": 10,
+          "local_epochs": 1,
+          "batch_size": 4,
+          "gradient_accumulation": 4,
+          "learning_rate": 0.0002,
+          "weight_decay": 0.0,
+          "max_grad_norm": 1.0,
+          "max_steps": null
+        },
+        "defense": {
+          "name": "hfedsa",
+          "representation": "raw",
+          "beta": 0.2,
+          "gmm_reg": 0.0001,
+          "threshold": 0.5,
+          "clip_factor": 2.0,
+          "anchor_repeats": 2,
+          "anchor_steps": 2,
+          "anchor_fraction": 0.8,
+          "anchor_trigger": "remarkable sapphire",
+          "anchor_match_min": 0.0,
+          "probe_entropy": 0.7,
+          "audit_fraction": 0.1
+        },
+        "aggregation": {
+          "mode": "effective",
+          "normalize": "none"
+        },
+        "attack": {
+          "name": "none",
+          "malicious_fraction": 0.0,
+          "poison_fraction": 0.2,
+          "target_label": 1,
+          "trigger": "quiet amber",
+          "scale": 5.0
+        },
+        "resolved_model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+        "data_hash": "bd210edce75e25bd00a1685afbd501b3fdfea8ca176b94fc58981c6f6745276e",
+        "source_hash": "21b22af56c6efdce74a615ddbd7ca7a4f7f984708aa2dec38f624e38209958ca"
+      },
+      "seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "runs": [
+        "runs/clean-pair/hfedsa-raw-none-mix0.4-seed2026",
+        "runs/clean-pair/hfedsa-raw-none-mix0.4-seed2027",
+        "runs/clean-pair/hfedsa-raw-none-mix0.4-seed2028"
+      ],
+      "synthetic": false,
+      "seed_statistics": {
+        "test_macro_accuracy": {
+          "n_seeds": 3,
+          "mean": 0.9309895833333334,
+          "std": 0.002983447718070208
+        },
+        "asr_macro": {
+          "n_seeds": 0,
+          "mean": null,
+          "std": null
+        },
+        "heterogeneous_rate": {
+          "n_seeds": 3,
+          "mean": 0.3829365079365079,
+          "std": 0.08673608331108885
+        },
+        "benign_rate": {
+          "n_seeds": 3,
+          "mean": 0.23513645224171542,
+          "std": 0.06798769603986078
+        },
+        "malicious_rate": {
+          "n_seeds": 0,
+          "mean": null,
+          "std": null
+        },
+        "heterogeneous_weight_ratio": {
+          "n_seeds": 3,
+          "mean": 0.7238051116512002,
+          "std": 0.23514055585132562
+        }
+      },
+      "pooled_counts_descriptive_only": {
+        "benign": {
+          "flagged": 52,
+          "scored_client_rounds": 220,
+          "rate": 0.23636363636363636
+        },
+        "heterogeneous": {
+          "flagged": 31,
+          "scored_client_rounds": 80,
+          "rate": 0.3875
+        },
+        "malicious": {
+          "flagged": 0,
+          "scored_client_rounds": 0,
+          "rate": null
+        }
+      }
+    },
+    {
+      "group": "f3b2a8fe91c3eee5a34092a7ca23cfd7137350f46b08d104e39eeefcc0e1bdac",
+      "config": {
+        "model": {
+          "backend": "qwen",
+          "name": "Qwen/Qwen2.5-0.5B",
+          "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+          "rank": 4,
+          "alpha": 8,
+          "dropout": 0.0,
+          "max_length": 256,
+          "targets": [
+            "q_proj",
+            "v_proj"
+          ],
+          "dtype": "bfloat16"
+        },
+        "data": {
+          "kind": "hf",
+          "seed": 42,
+          "clients": 20,
+          "heterogeneous_clients": 5,
+          "samples_per_client": 500,
+          "mix_ratio": 0.4,
+          "root_per_domain": 128,
+          "validation_per_domain": 64,
+          "test_per_domain": 256,
+          "root_domains": [
+            "sst2"
+          ],
+          "revisions": {
+            "sst2": "8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb",
+            "imdb": "e6281661ce1c48d982bc483cf8a173c1bbeb5d31"
+          }
+        },
+        "train": {
+          "rounds": 10,
+          "clients_per_round": 10,
+          "local_epochs": 1,
+          "batch_size": 4,
+          "gradient_accumulation": 4,
+          "learning_rate": 0.0002,
+          "weight_decay": 0.0,
+          "max_grad_norm": 1.0,
+          "max_steps": null
+        },
+        "defense": {
+          "name": "hfedsa",
+          "representation": "effective",
+          "beta": 0.2,
+          "gmm_reg": 0.0001,
+          "threshold": 0.5,
+          "clip_factor": 2.0,
+          "anchor_repeats": 2,
+          "anchor_steps": 2,
+          "anchor_fraction": 0.8,
+          "anchor_trigger": "remarkable sapphire",
+          "anchor_match_min": 0.0,
+          "probe_entropy": 0.7,
+          "audit_fraction": 0.1
+        },
+        "aggregation": {
+          "mode": "effective",
+          "normalize": "none"
+        },
+        "attack": {
+          "name": "none",
+          "malicious_fraction": 0.0,
+          "poison_fraction": 0.2,
+          "target_label": 1,
+          "trigger": "quiet amber",
+          "scale": 5.0
+        },
+        "resolved_model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+        "data_hash": "bd210edce75e25bd00a1685afbd501b3fdfea8ca176b94fc58981c6f6745276e",
+        "source_hash": "21b22af56c6efdce74a615ddbd7ca7a4f7f984708aa2dec38f624e38209958ca"
+      },
+      "seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "runs": [
+        "runs/clean-pair/hfedsa-effective-none-mix0.4-seed2026",
+        "runs/clean-pair/hfedsa-effective-none-mix0.4-seed2027",
+        "runs/clean-pair/hfedsa-effective-none-mix0.4-seed2028"
+      ],
+      "synthetic": false,
+      "seed_statistics": {
+        "test_macro_accuracy": {
+          "n_seeds": 3,
+          "mean": 0.9296875,
+          "std": 0.005167483029423029
+        },
+        "asr_macro": {
+          "n_seeds": 0,
+          "mean": null,
+          "std": null
+        },
+        "heterogeneous_rate": {
+          "n_seeds": 3,
+          "mean": 0.3333333333333333,
+          "std": 0.0743452142666476
+        },
+        "benign_rate": {
+          "n_seeds": 3,
+          "mean": 0.2322124756335283,
+          "std": 0.02002354751856897
+        },
+        "malicious_rate": {
+          "n_seeds": 0,
+          "mean": null,
+          "std": null
+        },
+        "heterogeneous_weight_ratio": {
+          "n_seeds": 3,
+          "mean": 0.7327652341193996,
+          "std": 0.17571719777114592
+        }
+      },
+      "pooled_counts_descriptive_only": {
+        "benign": {
+          "flagged": 51,
+          "scored_client_rounds": 220,
+          "rate": 0.2318181818181818
+        },
+        "heterogeneous": {
+          "flagged": 27,
+          "scored_client_rounds": 80,
+          "rate": 0.3375
+        },
+        "malicious": {
+          "flagged": 0,
+          "scored_client_rounds": 0,
+          "rate": null
+        }
+      }
+    }
+  ],
+  "note": "Seeds are replicates; repeated client-rounds are not independent samples. Synthetic results are software checks only."
+}

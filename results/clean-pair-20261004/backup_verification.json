@@ -1,0 +1,19 @@
+{
+  "status": "verified",
+  "verified_at_utc": "2026-10-04T13:53:39.760365+00:00",
+  "archive": "Mars-clean-pair-20261004.zip",
+  "bytes": 773726956,
+  "sha256": "a288488ca80175ab2b97cee843028a912151d2afb76cf4149a1b3be19c0dab3d",
+  "zip_crc_passed": true,
+  "per_file_sha256_passed": true,
+  "manifest_files": 355,
+  "checkpoints": 6,
+  "final_adapters": 6,
+  "cached_updates": 60,
+  "training_commit": "df7e8c2095fd7c1fc89f869d39059676eb622812",
+  "exclusions": [
+    "Base model weights (retrieve the pinned upstream model revision)",
+    "SSH and network credentials",
+    "virtual environment binaries"
+  ]
+}

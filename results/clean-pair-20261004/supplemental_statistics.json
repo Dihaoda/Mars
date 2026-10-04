@@ -1,0 +1,18 @@
+{
+  "offline_replay_paired": {
+    "raw": {
+      "mean_difference_pp": -7.142857142857144,
+      "sample_std_pp": 9.449111825230684,
+      "n_seeds": 3
+    },
+    "effective": {
+      "mean_difference_pp": -5.357142857142857,
+      "sample_std_pp": 6.43848442047141,
+      "n_seeds": 3
+    }
+  },
+  "total_round_seconds_all_six": 8225.920733733103,
+  "svd_relative_error_mean_60_rounds": 0.007501825070624886,
+  "svd_relative_error_min": 0.006214605904378423,
+  "svd_relative_error_max": 0.009163709313439737
+}

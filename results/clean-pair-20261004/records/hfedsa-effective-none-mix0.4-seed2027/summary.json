@@ -1,0 +1,40 @@
+{
+  "status": "complete",
+  "completed_rounds": 10,
+  "synthetic": false,
+  "pooled_client_round_detection": {
+    "benign_n": 76,
+    "benign_scored_n": 76,
+    "benign_flagged": 16,
+    "benign_rate": 0.21052631578947367,
+    "benign_mean_weight": 0.1020212408787898,
+    "heterogeneous_n": 24,
+    "heterogeneous_scored_n": 24,
+    "heterogeneous_flagged": 6,
+    "heterogeneous_rate": 0.25,
+    "heterogeneous_mean_weight": 0.09359940388383232,
+    "malicious_n": 0,
+    "malicious_scored_n": 0,
+    "malicious_flagged": 0,
+    "malicious_rate": null,
+    "malicious_mean_weight": null,
+    "auc": null,
+    "heterogeneous_weight_ratio": 0.9174501611388617
+  },
+  "config_hash": "210fc6194dfd2c8f0d50dddeabf2f7916cc79c56b3f74cc8ea52f7d7a1d75344",
+  "total_round_seconds": 1384.7757153995335,
+  "test": {
+    "sst2": {
+      "n": 256,
+      "accuracy": 0.93359375,
+      "loss": 0.10321472456053016
+    },
+    "imdb": {
+      "n": 256,
+      "accuracy": 0.9140625,
+      "loss": 0.09979182022652822
+    }
+  },
+  "test_macro_accuracy": 0.923828125,
+  "asr": null
+}

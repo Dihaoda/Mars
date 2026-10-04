@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "runs": 6,
+  "rounds": 60,
+  "cached_rounds_replayed": 60,
+  "score_conditions_per_cache": 2,
+  "code_commit": "df7e8c2095fd7c1fc89f869d39059676eb622812",
+  "source_hash": "21b22af56c6efdce74a615ddbd7ca7a4f7f984708aa2dec38f624e38209958ca",
+  "data_hash": "bd210edce75e25bd00a1685afbd501b3fdfea8ca176b94fc58981c6f6745276e",
+  "warning": "Replay has no new trained-model accuracy or ASR. No attack was evaluated."
+}
