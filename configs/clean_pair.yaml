@@ -1,0 +1,10 @@
+# First matched no-attack experiment. All six jobs resolve to full frozen configs.
+model:
+  revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
+data:
+  mix_ratio: 0.4
+  revisions:
+    sst2: 8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb
+    imdb: e6281661ce1c48d982bc483cf8a173c1bbeb5d31
+runtime:
+  device: cuda

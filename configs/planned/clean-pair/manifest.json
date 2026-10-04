@@ -1,0 +1,48 @@
+{
+  "suite": "clean-pair",
+  "jobs": [
+    {
+      "id": "hfedsa-raw-none-mix0.4-seed2026",
+      "config": "configs/planned/clean-pair/hfedsa-raw-none-mix0.4-seed2026.yaml",
+      "data": "data/0882b7dd63822ae3",
+      "output": "runs/clean-pair/hfedsa-raw-none-mix0.4-seed2026",
+      "config_hash": "4b37e06269b0350afab1a63c54ebec91fcb7a79c3e8e2498563300d423c0b102"
+    },
+    {
+      "id": "hfedsa-effective-none-mix0.4-seed2026",
+      "config": "configs/planned/clean-pair/hfedsa-effective-none-mix0.4-seed2026.yaml",
+      "data": "data/0882b7dd63822ae3",
+      "output": "runs/clean-pair/hfedsa-effective-none-mix0.4-seed2026",
+      "config_hash": "4f0ba7c2e630b3fe93a987cfba8ab2cb958962b5dceefc06de1fc147b00331f7"
+    },
+    {
+      "id": "hfedsa-raw-none-mix0.4-seed2027",
+      "config": "configs/planned/clean-pair/hfedsa-raw-none-mix0.4-seed2027.yaml",
+      "data": "data/0882b7dd63822ae3",
+      "output": "runs/clean-pair/hfedsa-raw-none-mix0.4-seed2027",
+      "config_hash": "c8f8d6efdb7fff7b9414d9cf3967bdcd79c9eb187bf37e9dafa80d03c5ddc12a"
+    },
+    {
+      "id": "hfedsa-effective-none-mix0.4-seed2027",
+      "config": "configs/planned/clean-pair/hfedsa-effective-none-mix0.4-seed2027.yaml",
+      "data": "data/0882b7dd63822ae3",
+      "output": "runs/clean-pair/hfedsa-effective-none-mix0.4-seed2027",
+      "config_hash": "210fc6194dfd2c8f0d50dddeabf2f7916cc79c56b3f74cc8ea52f7d7a1d75344"
+    },
+    {
+      "id": "hfedsa-raw-none-mix0.4-seed2028",
+      "config": "configs/planned/clean-pair/hfedsa-raw-none-mix0.4-seed2028.yaml",
+      "data": "data/0882b7dd63822ae3",
+      "output": "runs/clean-pair/hfedsa-raw-none-mix0.4-seed2028",
+      "config_hash": "c751fcc2fe8acf770eb79664e34f0c1ccf636062e0672f182c1c8f911d862480"
+    },
+    {
+      "id": "hfedsa-effective-none-mix0.4-seed2028",
+      "config": "configs/planned/clean-pair/hfedsa-effective-none-mix0.4-seed2028.yaml",
+      "data": "data/0882b7dd63822ae3",
+      "output": "runs/clean-pair/hfedsa-effective-none-mix0.4-seed2028",
+      "config_hash": "710ebd9f9a83b62c94d163a8c5261c8939d4467329ec1ece236dab9ea34bedb3"
+    }
+  ],
+  "warning": "Planned experiments, not results. Check pinned revisions before execution."
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "four mixed-length examples, real Qwen BF16 CUDA forward/backward; not a whole-round speed estimate",
+  "loss_max_absolute_difference": 0.0,
+  "gradient_relative_l2_difference": 0.011446017771959305,
+  "full_projection_seconds": 0.07723869010806084,
+  "selected_projection_seconds": 0.07646693103015423,
+  "full_projection_peak_bytes": 4715130880,
+  "selected_projection_peak_bytes": 2911203840,
+  "passed": true
+}

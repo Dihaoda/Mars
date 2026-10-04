@@ -194,7 +194,7 @@ def _run(cfg, data_dir, output_dir, resume, until_round):
             summary["asr"] = _evaluate(backend, state, groups)
             summary["asr_macro"] = sum(x["accuracy"] for x in summary["asr"].values()) / len(summary["asr"])
         backend.load(state)
-        backend.model.save_pretrained(output_dir / "adapter", safe_serialization=True)
+        backend.model.save_pretrained(output_dir / "adapter", safe_serialization=True, save_embedding_layers=False)
         if hasattr(backend.tokenizer, "save_pretrained"):
             backend.tokenizer.save_pretrained(output_dir / "adapter")
     write_json(output_dir / "summary.json", summary)

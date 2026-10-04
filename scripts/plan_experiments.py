@@ -16,7 +16,7 @@ from mars.utils import digest, write_json
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--suite", choices=["pilot", "ablation", "attacks"], required=True)
+    parser.add_argument("--suite", choices=["pilot", "clean-pair", "ablation", "attacks"], required=True)
     parser.add_argument("--directory", default="runs/plans")
     parser.add_argument("--execute", action="store_true")
     parser.add_argument("--max-runs", type=int, default=1)
@@ -25,7 +25,10 @@ def main():
     target = Path(args.directory) / args.suite
     target.mkdir(parents=True, exist_ok=True)
     seed_values = [2026, 2027, 2028]
-    if args.suite == "pilot":
+    if args.suite == "clean-pair":
+        configs = [(s, 0.4, "hfedsa", representation, "none")
+                   for s, representation in itertools.product(seed_values, ["raw", "effective"])]
+    elif args.suite == "pilot":
         configs = [(s, mix, "hfedsa", "raw", "none") for s, mix in itertools.product(seed_values, [0.0, 0.4, 0.8])]
     elif args.suite == "ablation":
         configs = [(s, 0.4, method, representation, "none") for s, method, representation in
@@ -36,7 +39,8 @@ def main():
                                      ["label_flip", "backdoor", "scale"])]
     jobs = []
     for seed, mix, method, representation, attack in configs:
-        cfg = load_config(root / "configs" / ("pilot.yaml" if args.suite == "pilot" else "matched_reference.yaml"))
+        template = "clean_pair.yaml" if args.suite == "clean-pair" else "pilot.yaml" if args.suite == "pilot" else "matched_reference.yaml"
+        cfg = load_config(root / "configs" / template)
         cfg["seed"], cfg["data"]["mix_ratio"] = seed, mix
         cfg["defense"]["name"], cfg["defense"]["representation"] = method, representation
         cfg["attack"]["name"] = attack
@@ -47,10 +51,10 @@ def main():
         config_path.write_text(yaml.safe_dump(cfg, sort_keys=False), encoding="utf-8")
         data_dir = "data/" + digest(partition_spec(cfg))[:16]
         run_dir = f"runs/{args.suite}/{identifier}"
-        jobs.append({"id": identifier, "config": str(config_path), "data": data_dir, "output": run_dir,
+        jobs.append({"id": identifier, "config": config_path.as_posix(), "data": data_dir, "output": run_dir,
                      "config_hash": digest(cfg)})
     write_json(target / "manifest.json", {"suite": args.suite, "jobs": jobs,
-                                            "warning": "Plan only. Freeze upstream revisions after the first prepare before launching a multi-seed campaign."})
+                                            "warning": "Planned experiments, not results. Check pinned revisions before execution."})
     print(f"Planned {len(jobs)} runs at {target}. Execute requested: {args.execute}")
     if args.execute:
         if args.max_runs < 1:

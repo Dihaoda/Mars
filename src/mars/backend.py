@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import random
+import re
 import time
 
 import torch
@@ -48,7 +49,9 @@ class Backend:
             base = Qwen2ForCausalLM(config)
         else:
             from huggingface_hub import HfApi
-            self.revision = resolved_revision or HfApi().model_info(model_cfg["name"], revision=model_cfg["revision"]).sha
+            requested = model_cfg["revision"]
+            self.revision = resolved_revision or (requested if re.fullmatch(r"[0-9a-f]{40}", requested)
+                                                  else HfApi().model_info(model_cfg["name"], revision=requested).sha)
             self.tokenizer = AutoTokenizer.from_pretrained(model_cfg["name"], revision=self.revision)
             if self.tokenizer.pad_token_id is None:
                 self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -69,7 +72,9 @@ class Backend:
 
     def state(self):
         from peft import get_peft_model_state_dict
-        return clone_state(get_peft_model_state_dict(self.model))
+        # The vocabulary/base weights are frozen. Explicitly excluding embeddings
+        # also avoids PEFT's automatic remote base-config lookup on every snapshot.
+        return clone_state(get_peft_model_state_dict(self.model, save_embedding_layers=False))
 
     def load(self, state):
         from peft import set_peft_model_state_dict
@@ -104,8 +109,12 @@ class Backend:
 
     def _losses(self, rows, label=None):
         inputs, labels = self.batch(rows, label)
-        logits = self.model(**inputs).logits[:, :-1].float()
         targets = labels[:, 1:]
+        # Qwen still attends to the full sequence. Only the vocabulary projection
+        # for positions with supervised next tokens is needed for this objective.
+        positions = torch.nonzero((targets != -100).any(dim=0), as_tuple=True)[0]
+        targets = targets.index_select(1, positions)
+        logits = self.model(**inputs, logits_to_keep=positions).logits.float()
         loss = F.cross_entropy(logits.reshape(-1, logits.shape[-1]), targets.reshape(-1),
                                reduction="none", ignore_index=-100).reshape(targets.shape)
         return loss.sum(dim=1), (targets != -100).sum(dim=1)
@@ -162,11 +171,12 @@ class Backend:
             for label in (0, 1):
                 losses, _ = self._losses(batch, label)
                 scores.append(losses)
-            prediction = torch.stack(scores, dim=1).argmin(dim=1).cpu().tolist()
+            scores = torch.stack(scores, dim=1)
+            prediction = scores.argmin(dim=1).cpu().tolist()
             correct += sum(p == row["label"] for p, row in zip(prediction, batch))
-            losses, counts = self._losses(batch)
-            loss_sum += float(losses.sum())
-            token_sum += int(counts.sum())
+            truth = torch.tensor([row["label"] for row in batch], device=self.device)
+            loss_sum += float(scores.gather(1, truth[:, None]).sum())
+            token_sum += sum(len(self.answers[row["label"]]) for row in batch)
             count += len(batch)
         return {"n": count, "accuracy": correct / count, "loss": loss_sum / token_sum}
 
