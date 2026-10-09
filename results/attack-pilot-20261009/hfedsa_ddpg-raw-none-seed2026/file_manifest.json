@@ -1,0 +1,785 @@
+{
+  "files": [
+    {
+      "path": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026.yaml",
+      "bytes": 1877,
+      "sha256": "ebc081f7ff22075e3be92eda0ab01dc8b9b0264cfc23ecc89f519acc2ae41337"
+    },
+    {
+      "path": "configs/planned/attack-pilot-20261009/manifest.json",
+      "bytes": 19351,
+      "sha256": "d99cb945971e0bf5e38d5367419959afbb8eb90b20b064129fc0a5cab7db2b88"
+    },
+    {
+      "path": "data/attack-pilot-20261009/clean/bundle.json",
+      "bytes": 4249073,
+      "sha256": "d891a186bb0d9c7aeada85927c851ac4ef67135e8113eea0018ce3fd1b00d748"
+    },
+    {
+      "path": "data/attack-pilot-20261009/clean/manifest.json",
+      "bytes": 2440878,
+      "sha256": "03fd92e52bf3c2376e02c8e209c876ca9db5bab1ea441601291435b7df2c866b"
+    },
+    {
+      "path": "docs/attack-pilot-20261009.md",
+      "bytes": 4482,
+      "sha256": "929d776740696668bd05e34d74f97ba50a930d8d1a60a9da424056f0097242f1"
+    },
+    {
+      "path": "docs/workone-port.md",
+      "bytes": 3345,
+      "sha256": "dd57ba2427023c678cb82569785c2c5ac2a856c1ca1d6df76de8cc286c098b26"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 737,
+      "sha256": "a1fd09ca11d4241a0c935d879eee66f5d1c83d8cd0b7c28f7571edf2d012f83b"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/adapter/README.md",
+      "bytes": 5091,
+      "sha256": "78e89b81eeb52533b7208fafb3993b02ea609fa44aaad2095a9696e4a2a7be36"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/adapter/adapter_config.json",
+      "bytes": 770,
+      "sha256": "ff7ece8b4efe00dfe294b34b340938511d137b3a720f38f736538879c1a182a1"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/adapter/adapter_model.safetensors",
+      "bytes": 1093728,
+      "sha256": "2457ee419ca1e5301b5a9a4fdd3924ee7ce4e2245294c1cf23226c1b9ebe1b4c"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/adapter/added_tokens.json",
+      "bytes": 605,
+      "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/adapter/chat_template.jinja",
+      "bytes": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/adapter/merges.txt",
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/adapter/special_tokens_map.json",
+      "bytes": 616,
+      "sha256": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/adapter/tokenizer.json",
+      "bytes": 11421896,
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/adapter/tokenizer_config.json",
+      "bytes": 4689,
+      "sha256": "60f6e7bc948cedd377a20f01d022ef664d026fbc93d72e0a9bdac233f8632181"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/adapter/vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/checkpoint.pt",
+      "bytes": 1766127,
+      "sha256": "915c927e1d95b92dd0b232c8656e25b5152d5b96581fd1ff5b37c1bf5673b73b"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/clients.csv",
+      "bytes": 256525,
+      "sha256": "6edd3f5357f3eb1225acc45ea4e776cce1783dc7c9122369a80c4f301645b77d"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/controller_learning_check.json",
+      "bytes": 575,
+      "sha256": "133f86013faecf3b04858d8e4c02c02ddd264a6485a93f2c1cece06d0e189464"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/data_manifest.json",
+      "bytes": 2440878,
+      "sha256": "03fd92e52bf3c2376e02c8e209c876ca9db5bab1ea441601291435b7df2c866b"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/environment.freeze.txt",
+      "bytes": 5350,
+      "sha256": "ba707fc4667bb845a817f14e913eb1a2f42848658d269f0d73c204291ea44773"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/metadata.json",
+      "bytes": 3784,
+      "sha256": "162292cb30244b6ccb18163bf8f38a036dcd9b17eda3bd4987ae499f861ca930"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/progress.json",
+      "bytes": 1334,
+      "sha256": "04d9a67e99f6e91f7c65b870e0e810d6ba2da6a6321d03d38ad2cfd5948a3125"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_001.json",
+      "bytes": 24120,
+      "sha256": "3f4f50e8fe6a0dc72de1d524cf2a89c2ed932a439dca8aebfae08034ff9c1acb"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_002.json",
+      "bytes": 24153,
+      "sha256": "39b7b632a3d5efdb6c0aadede26e042e036e4d6cb498cc0a6988602c4ddf0759"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_003.json",
+      "bytes": 24022,
+      "sha256": "9e226dde547b998848266e654fcb1a2efa6f716b2f8774d0ed2c502a035d772f"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_004.json",
+      "bytes": 23735,
+      "sha256": "20d2aef07b816e7e21901693336fe3b19cef5b34d154559bab4415d1cad1bfad"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_005.json",
+      "bytes": 23986,
+      "sha256": "ea91e4cb056b151b9bcfbe3951c26ab2d49599c7ba15029567803bc62eeb3c7d"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_006.json",
+      "bytes": 23968,
+      "sha256": "4430b37d919c099e7efc7cd46eebf0caa88e2ec10af36a6ff27ade73dae2f788"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_007.json",
+      "bytes": 24206,
+      "sha256": "528110343c61f8f135456ed23dd1dca9ccceae9f28f57be8381c61d1b6391868"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_008.json",
+      "bytes": 23990,
+      "sha256": "bbd9ee13dfe8a22f309093ca209b3d70191787dc73de08da430ddda7ac7fe63e"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_009.json",
+      "bytes": 24018,
+      "sha256": "656d035e867c2840968303cb107d623153bbf3536a56b4fb9320df025d806dfd"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_010.json",
+      "bytes": 23894,
+      "sha256": "78588e9724e5213c6c4f9979c2ff3070ff9cedecb789e5aa3b27be689abd6481"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_011.json",
+      "bytes": 24059,
+      "sha256": "f60fe0a59ef46339006bc42d0e861ce9d70b02bc66e68f24049c348bda88c99c"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_012.json",
+      "bytes": 24185,
+      "sha256": "31ac09759fe01c9825f8690968ecfa90d1e3a1d035745fa8bc2b36599ba7c681"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_013.json",
+      "bytes": 24139,
+      "sha256": "26973d03dc26161aa806d62468d44ca32e911c4cb52e2a4d058202a545e4cfd3"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_014.json",
+      "bytes": 24146,
+      "sha256": "d23c3c13e0843a7d41349af87fec8d9df5c39a626637e317364dc793dd8518d7"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_015.json",
+      "bytes": 24089,
+      "sha256": "615c77c345501c0da3862d81b1125f0e4767b1afcc6eeddae684b78f8e0f6cd7"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_016.json",
+      "bytes": 24024,
+      "sha256": "6ede823bb95f0688ac0fa0eff4c2bd31139df4e200016c32c9ec7c558cf040a8"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_017.json",
+      "bytes": 24045,
+      "sha256": "3bbc17a31f85cf0fae423c0b97958ba34873ae943d7012cd2830a333ba446fdb"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_018.json",
+      "bytes": 24371,
+      "sha256": "017cf5c282a8dde97640743149c0a15d325966dccebe63bd33ab00ea7247c742"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_019.json",
+      "bytes": 24274,
+      "sha256": "46c535b0f915997aab2132e2eb7a5ff1c93f81bf7f17684e3b7d09965394dde5"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_020.json",
+      "bytes": 23896,
+      "sha256": "44983b43a0cf6be38265f0350ae9a13529229d3ddac6cad13c6beff304cc3bed"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_021.json",
+      "bytes": 23683,
+      "sha256": "129ee31851e56d3ab5a29c0d87f44f22552a0327ea8592f6c47a80ed00bea2bb"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_022.json",
+      "bytes": 24048,
+      "sha256": "88fc547b391337928dfc15355b850e9d1e0daf7c8e8144a8f90b30f7e4141d3b"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_023.json",
+      "bytes": 24018,
+      "sha256": "b28386cc68dde8317dfd4877e557d2eb96d8e11488737789e5b30a0931c55d3f"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_024.json",
+      "bytes": 24213,
+      "sha256": "9937ce0afc4834ec94f0d1a86575be3f4abb2e205b05e6ad864fdace4c85ee3c"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_025.json",
+      "bytes": 24305,
+      "sha256": "42b172768a857b3a033f34b70173c649d3566f10bae10374beda34e627849a0c"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_026.json",
+      "bytes": 24144,
+      "sha256": "682014570fc2f395cc37028a9c85adc38c974244eecb7c42d51072685c0d9eba"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_027.json",
+      "bytes": 24246,
+      "sha256": "571be8117e1b3453d7bfcc8ee916546c4e22816389513fd13fce1959ea231628"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_028.json",
+      "bytes": 24280,
+      "sha256": "f4844c1dff7d5ffc7914009ec34574c680d8a7c0d7ddc87cf0eeb8f1c2c1fdf7"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_029.json",
+      "bytes": 23817,
+      "sha256": "43db445d65609ac35acc05538a608d9631a30fd1b0660fbd652c02f00f013338"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_030.json",
+      "bytes": 23924,
+      "sha256": "e2d1cdceda3a5eb5eb07113ab2d0847179e22a6ea7dc3710c9c6b8cc2a016f33"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_031.json",
+      "bytes": 23967,
+      "sha256": "496bd3e5a21dcde7b1e3ec20e47abd789f7989abee1189e55ffdc3537d369893"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_032.json",
+      "bytes": 23836,
+      "sha256": "a40eb6bd1e71e2f5d36aeedad400591b6cee67a115e0659fd7e48c9907a0b699"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_033.json",
+      "bytes": 24146,
+      "sha256": "dc4981799a864c1066800e003e9555519acc7efb821f6f836865f2efa845f7d2"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_034.json",
+      "bytes": 23532,
+      "sha256": "79650ec193461563436e79651250899a157c91e7ea95af0beb835b511e904cc6"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_035.json",
+      "bytes": 24097,
+      "sha256": "9cf3f7d6b9d671327c6e36ba968fe97dd4aa2171268f05cf5dca65942a592a85"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_036.json",
+      "bytes": 24067,
+      "sha256": "e4fb0f16df1b4602db3c73835ea5e4fccb2f606155ef5e27001c9d9deb4fc194"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_037.json",
+      "bytes": 23782,
+      "sha256": "06fa1ed95d7d166369ca7711f0b9ff0be6502378c4a61f17af6230000537df20"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_038.json",
+      "bytes": 23546,
+      "sha256": "32841735510ef7b1bc21b7f36da5177771000ec50af5e773c262c4963a6e6ae6"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_039.json",
+      "bytes": 24123,
+      "sha256": "729ccd32b8743f56ff30cb1d5f37edd672e07e6919a520eb95e0b9ed0d8041e8"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_040.json",
+      "bytes": 24154,
+      "sha256": "f28e6101f79f4c3fff5e281040b094b2177b34d91097bbbe731081bf05f77e80"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_041.json",
+      "bytes": 23632,
+      "sha256": "155dc7ebee22d73fa84336863ce89abacb1a645e75a42a6c838333633f009620"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_042.json",
+      "bytes": 23907,
+      "sha256": "87ebf7a4a4faed24ec1a3957233c3b2e1817f749ecd8f88542affc1cf2cfecf9"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_043.json",
+      "bytes": 24186,
+      "sha256": "e34492c9984be47fb723d3723a754419e7c59e3463f87ecd3781024e7f95c8f4"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_044.json",
+      "bytes": 24209,
+      "sha256": "db0be2e06ebc6c315e4c0fc5ad16f3be95d655e40475625bb80846f041ae24a7"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_045.json",
+      "bytes": 23703,
+      "sha256": "6f477c75fa6447ca7b306b33eb8fa66af76219a4e2b392261a41df290a29ea16"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_046.json",
+      "bytes": 24084,
+      "sha256": "23a40f39f354a01d7b5d6436dd54dd2a2140ac21ff111a6476ed67d8efde034e"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_047.json",
+      "bytes": 23671,
+      "sha256": "fe7bf38823f9672698a5025ed1e1850026dc96fa6048179999ead7768b5c754e"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_048.json",
+      "bytes": 24210,
+      "sha256": "d62be79a54114c6bde4a6825024f2c467bf6563ac21d754fc95d5fe5237dab02"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_049.json",
+      "bytes": 24196,
+      "sha256": "c96bc06b727a67d85e84ced3670cef45fd14afae5b0380f560a9a82ec07af7dd"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/round_050.json",
+      "bytes": 24251,
+      "sha256": "072ca4f21b15d1a608b686929389e27143badfa65dc4bd465b0554ba0aee32d2"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/rounds.csv",
+      "bytes": 9023,
+      "sha256": "b3d9ec084dc5e06c929cf0896c467a373cff940f7a8968c45edc9627a047df13"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/summary.json",
+      "bytes": 1227,
+      "sha256": "d6f2b2a685bfda8013685469fe7ede18ba39af55c4e9191c55ced4ebb035d801"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_001.pt",
+      "bytes": 13512253,
+      "sha256": "34e899eb3ebd704b578dadf505e695c4dcb435235a1a76f782bfb51b8d960f9a"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_002.pt",
+      "bytes": 13513341,
+      "sha256": "fb1ac19c7b8e9689f785e65c15285d564e78a6170177690b4308eb7da282d9a1"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_003.pt",
+      "bytes": 13513789,
+      "sha256": "29ca080aee8a0d0c8b6eb2c1bd6a1e333355ef01076ef696ac053221ea3951bb"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_004.pt",
+      "bytes": 13514365,
+      "sha256": "e86bcbcbe1f0fcbd5d4b928d722961c483c643c8d6eb8b83f372b3b8ec2fe3ec"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_005.pt",
+      "bytes": 13514941,
+      "sha256": "3e5ef3af48aa577bc0f771143094d3f477d6631833a4817b01ca623e45bc4736"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_006.pt",
+      "bytes": 13515453,
+      "sha256": "8f78448771c8f7f8307b3cdfa1cc0b59d0c9098b66b6983230ab2eac7ebb0c6f"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_007.pt",
+      "bytes": 13515965,
+      "sha256": "d5120ddce27589b47123738484ef775429edca8304e1b2261ca8a34f59889327"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_008.pt",
+      "bytes": 13516477,
+      "sha256": "846e009ecc023aad7db5a59752144a2c807d32cfb8b448aff397ea267902038e"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_009.pt",
+      "bytes": 13517117,
+      "sha256": "f1c602d2da7e8f4312a2492166fb0067ead8d10ed4b285817e54d66cdcdecaa1"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_010.pt",
+      "bytes": 13517757,
+      "sha256": "bbb69a583d0413f2f2ac78e243153bf243f51debba4e9847a20ddcb1f0fbf6e7"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_011.pt",
+      "bytes": 13518205,
+      "sha256": "4540a9a95d2009ef10afe68beaaaa182725dfc82cc070bcfc190d7b5126e7fc9"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_012.pt",
+      "bytes": 13518781,
+      "sha256": "7d282a89beeba4a938bf52dd2bc2817d328c0fb21d1ed9966c536405a4bd398a"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_013.pt",
+      "bytes": 13519357,
+      "sha256": "681fa7713a2581597af5e04d22571819249605c0ee0ad376c3c742b4de462e3f"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_014.pt",
+      "bytes": 13519869,
+      "sha256": "e7c81b97ca725624ead15e90bea4f5bdb97961b3fcd1005bf46b16e478e94cb3"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_015.pt",
+      "bytes": 13520509,
+      "sha256": "e778a569a891aff1d9d5b2c28ef46e101b36f694c9c74e2477790621306d9c61"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_016.pt",
+      "bytes": 13520957,
+      "sha256": "80135e4c9192e6c180cf2f5f171e7d02fbda9959216b7c9a0250a6a73fcf7bf7"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_017.pt",
+      "bytes": 13521597,
+      "sha256": "c330debef2b49140215c29885bca02e75949607f1e4c0d75fe7146492f7c51bd"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_018.pt",
+      "bytes": 13633961,
+      "sha256": "49f52e037ea594fab1776f9f39461c5ce09c4d22da42470867d9b5ced65eab5c"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_019.pt",
+      "bytes": 13634537,
+      "sha256": "cf5bcd7ccb64b6ab42255754ade4da2096a3b5b4608c64979b74c8ffd52aa20d"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_020.pt",
+      "bytes": 13635049,
+      "sha256": "4654bd5293b340ed0dca8d5aa8730987269d1e309ea323eeb07566814c98924d"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_021.pt",
+      "bytes": 13635625,
+      "sha256": "27a0aeff0433264adb2700e7839e7956fbd957508cb371bec52dfb33993c963a"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_022.pt",
+      "bytes": 13636201,
+      "sha256": "f427b9b41527729aa88f854fb2d1f355c951c67f35f4f480266adfd20ba117f9"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_023.pt",
+      "bytes": 13636713,
+      "sha256": "7ab2e353f5e3b92669c82410fa2d5921a4d5ce117998cfd242799db094632d69"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_024.pt",
+      "bytes": 13637353,
+      "sha256": "59c93e44ed0b949fd03f8894e71b8d54f75b315c4b4cdcdce1bf16195a68358c"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_025.pt",
+      "bytes": 13637865,
+      "sha256": "2b3d3362bac7943eae27316a4c048e9371bfd2027242d9efc39625185836cb69"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_026.pt",
+      "bytes": 13638377,
+      "sha256": "462788ade268ddbe6df7e9fd8d15fd20ece557559c1f4cb2701e4dec4e4e8821"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_027.pt",
+      "bytes": 13638953,
+      "sha256": "748e9db174c82cee42022cbb0d201e8ab0b8365c8f7df78397de6bd1e1b3f721"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_028.pt",
+      "bytes": 13639465,
+      "sha256": "25944bb255ab9a2815f4678e8cea9773e46227809288343fc6f70f464831274a"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_029.pt",
+      "bytes": 13639977,
+      "sha256": "aa8f06a239ec955f58dac360a9518ea699fcd6897957a323c61784b8567f299c"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_030.pt",
+      "bytes": 13640553,
+      "sha256": "0dbeb35cc24b4fe721cb20a289d29b200734b958dcbb6f3317b71bf236e3ebf9"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_031.pt",
+      "bytes": 13641193,
+      "sha256": "8766034bca6128c5fc6938f71d231d63aa934c06c0a24ebdd247526bbd2a84b4"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_032.pt",
+      "bytes": 13641705,
+      "sha256": "73d3bed9af964bebf9bf8abf176c0b92f8e7e146c333a6875e26ce098c647c74"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_033.pt",
+      "bytes": 13642281,
+      "sha256": "b0b5711ab7e6bc05cb79263a249e9cb8a82521f5e101a88b86dc2d21b8718cfc"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_034.pt",
+      "bytes": 13642793,
+      "sha256": "77affbcd1f17dd3ee908406a717eba48f8426b4be8264f6bd197a3488b9f92f4"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_035.pt",
+      "bytes": 13643369,
+      "sha256": "569495ac73f20bf8dca1a4e20c41c0c041f373a83e73ab20f35b418ebd8e80fc"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_036.pt",
+      "bytes": 13643945,
+      "sha256": "e1b0ab238714c798036c879c19dacac3d25282ff1121738eb7ed9655f05c13b7"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_037.pt",
+      "bytes": 13644457,
+      "sha256": "f797b77bc9c0291d11a3ab66a4d8af24e143f75a82dae8bfd00a4c532cc84ad9"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_038.pt",
+      "bytes": 13644969,
+      "sha256": "3f6390349a648089b65d436d0a54757c624a68aa81aaa8bc78363bd77992d958"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_039.pt",
+      "bytes": 13645545,
+      "sha256": "7f37c29f0e9b2e19115ee43a4191d8034ca0759c9404200fbdd05701008b44a1"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_040.pt",
+      "bytes": 13646121,
+      "sha256": "660c5ee375465891469b4a7ae8a1d35f084015c341541a6037db19edc665889f"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_041.pt",
+      "bytes": 13646633,
+      "sha256": "16135b0dfc44c5af71c95c6ec7593b31a211a57859ccc54a9d79059111087b8b"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_042.pt",
+      "bytes": 13647145,
+      "sha256": "a7baada4a709188b11a5538692d4cc5ba79ea02e8325b272171816ed4ccc128a"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_043.pt",
+      "bytes": 13647785,
+      "sha256": "a6a7f483f07bd919facd2ca73a82109c160efbd7768a79601f430b2784fabd2f"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_044.pt",
+      "bytes": 13648361,
+      "sha256": "1433c540328e7b7db9b8c7808caf757078d691fe12705692fb4169808afae862"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_045.pt",
+      "bytes": 13648873,
+      "sha256": "1a98f9d90ab3bd65da9eb1d39f69fee738df8f83318ad6856efcb0ddaf05cd1c"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_046.pt",
+      "bytes": 13649449,
+      "sha256": "44a280c0b896135dee4cb252bed8bd4ee197c28e2179a0f896924fece9e36a80"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_047.pt",
+      "bytes": 13649961,
+      "sha256": "566aef881b6e936eb0bea9727a22877e06581c1e478ebb9dfbfb8557006e6597"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_048.pt",
+      "bytes": 13650537,
+      "sha256": "32ab8a7d152a777a13419a21656c19aeb9db9278523a4930e63d85287ffb1e98"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_049.pt",
+      "bytes": 13651113,
+      "sha256": "45acafdcf74da33c701e6668c3403717d0a5307f383e8985f0a96c59beadb5c6"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026/updates_050.pt",
+      "bytes": 13651625,
+      "sha256": "69e7eac041c9903d5157fbb67dac1798db0173386e62bfded4593cc8f8d30a1e"
+    },
+    {
+      "path": "runs/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026.console.log",
+      "bytes": 4808,
+      "sha256": "13f105061c38edf3897b6c567091417f2884e5afd0a4a5347ad1c6b3b94d6669"
+    },
+    {
+      "path": "scripts/analyze_clean_pair.py",
+      "bytes": 9278,
+      "sha256": "c942f19c2e260b05a8c149d9ab90324e00c886c6303e720d98fc3291aa87cf79"
+    },
+    {
+      "path": "scripts/autodl_smoke.sh",
+      "bytes": 1047,
+      "sha256": "dac741a1ff1d67ce1a7076c68418f7e6253194600dfc5c34ec55b39b324af057"
+    },
+    {
+      "path": "scripts/collect_attack_pilot.py",
+      "bytes": 7080,
+      "sha256": "e1f1e45cf28c6094ac1a25e0df2dac44e1ba5eac7d1413b171bf32b016504a43"
+    },
+    {
+      "path": "scripts/plan_experiments.py",
+      "bytes": 3690,
+      "sha256": "a6926704c0b8066c9dbdb2cffde73334bc2adf311220b10ba44a1de373d508af"
+    },
+    {
+      "path": "scripts/prepare_attack_pilot.py",
+      "bytes": 4900,
+      "sha256": "eb7dcc1901aac90471fc3b1a757053c13b6e398c2c2fd2a574e30a7dfa4715f1"
+    },
+    {
+      "path": "scripts/report_clean_pair.py",
+      "bytes": 11788,
+      "sha256": "899a87bc25ae521c167c29d4f0c03b9217227c46e8a49e370c881ff4614ea626"
+    },
+    {
+      "path": "scripts/run_attack_pilot.py",
+      "bytes": 4161,
+      "sha256": "1eee34022990efe453d801e8f545be312376fbdc60703ddb2e6bc79ab26d2e5e"
+    },
+    {
+      "path": "scripts/run_attack_pilot.sh",
+      "bytes": 264,
+      "sha256": "453b5085f3f3a908ffe46ba60077b8744a524c1aaa508f5787521720a58a0472"
+    },
+    {
+      "path": "scripts/run_clean_pair.sh",
+      "bytes": 1870,
+      "sha256": "86487f8ff303efe9a895fbc7982ef1f91b89e4d7ba5ac59c78eab18b08ae37b1"
+    },
+    {
+      "path": "scripts/setup_autodl.sh",
+      "bytes": 781,
+      "sha256": "5347f8ca5e08716702d8d7280e24a83ecf66ccc865890596e55b8edc6e31e7bb"
+    },
+    {
+      "path": "src/mars/__init__.py",
+      "bytes": 103,
+      "sha256": "3ef585781390e915837397b87f06d615166c582ccbdf6c15c9bc12a2af3baead"
+    },
+    {
+      "path": "src/mars/__main__.py",
+      "bytes": 30,
+      "sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279"
+    },
+    {
+      "path": "src/mars/adaptive_attack.py",
+      "bytes": 5724,
+      "sha256": "e8853892ffb9a13678f788d1664994dd8d49611729e856aa12bbeba50e6271cc"
+    },
+    {
+      "path": "src/mars/attacks.py",
+      "bytes": 1415,
+      "sha256": "60271b5d2774074e85d4dd4d907afeff40708c344bdec237e7db43fa8769bcb4"
+    },
+    {
+      "path": "src/mars/backend.py",
+      "bytes": 10750,
+      "sha256": "e1ac379be6ad27935517d8bf610df753642b792d01ba65f3b6ff8331fd09dcfb"
+    },
+    {
+      "path": "src/mars/cli.py",
+      "bytes": 7177,
+      "sha256": "1a5a03d0edbae36bd88327ec98bdf0913e28a2c04ef755632f1e0e73e4d52fe1"
+    },
+    {
+      "path": "src/mars/config.py",
+      "bytes": 9149,
+      "sha256": "529982fa8fe29a1985fd56c768c9b4691365641807160ec34ac956eafa9bbf26"
+    },
+    {
+      "path": "src/mars/data.py",
+      "bytes": 8028,
+      "sha256": "7ed36c9d453122f722defee284df267c6b0df636c798d1f7b6da3aaade90d811"
+    },
+    {
+      "path": "src/mars/defenses.py",
+      "bytes": 6476,
+      "sha256": "4fb3efd9e2739909effe506f753bc83f55016933566e38d671c4a91af8622c6f"
+    },
+    {
+      "path": "src/mars/geometry.py",
+      "bytes": 5469,
+      "sha256": "eb6510d5005faca7b59692b8f99cdede6360196828c3e610194adbb7973039f1"
+    },
+    {
+      "path": "src/mars/legacy_ddpg.py",
+      "bytes": 6426,
+      "sha256": "953f8753180540dfe907cb0cff17131181e3fa84f54e46e2d6bac022b94a9f9d"
+    },
+    {
+      "path": "src/mars/legacy_hfedsa.py",
+      "bytes": 29717,
+      "sha256": "9ccbc3671c44acedf6fcddbbbfbdbc9f9f1b1880d041a06c848822eb554a500e"
+    },
+    {
+      "path": "src/mars/legacy_tensor_ops.py",
+      "bytes": 1952,
+      "sha256": "0ce16a236491185b3c4d3b22c4f4b9e3be651556718c9fe0b3a682caeedada75"
+    },
+    {
+      "path": "src/mars/metrics.py",
+      "bytes": 2221,
+      "sha256": "dc36cb08d42c3d5c8b8695200f1b7075c49b0a1c8f64003007681944a1a0e704"
+    },
+    {
+      "path": "src/mars/report.py",
+      "bytes": 5268,
+      "sha256": "90e4d43630e421832b9b94150f9a6a32e40a04492ff1323246e172b8cbdde0c7"
+    },
+    {
+      "path": "src/mars/runner.py",
+      "bytes": 13639,
+      "sha256": "72e960557c2f641ab527e8f456098eccf411a558d23c8f33a90295c8186756f7"
+    },
+    {
+      "path": "src/mars/sampling.py",
+      "bytes": 1309,
+      "sha256": "ef585815b61fd9832ca6d0064be16d326b0294871539347fd879105a46a9661e"
+    },
+    {
+      "path": "src/mars/utils.py",
+      "bytes": 2067,
+      "sha256": "80c64975333ec9ca649451163c14eaf10d16812521ce3bcb7b42ad97a362fc6d"
+    },
+    {
+      "path": "src/mars/workone.py",
+      "bytes": 6388,
+      "sha256": "d1bf88550a759e29e6c4870968fa10a7cce597652758f26f195055ebb70bc139"
+    }
+  ],
+  "complete_run": "hfedsa_ddpg-raw-none-seed2026"
+}

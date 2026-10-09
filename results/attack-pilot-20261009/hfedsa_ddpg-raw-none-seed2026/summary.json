@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "completed_rounds": 50,
+  "synthetic": false,
+  "pooled_client_round_detection": {
+    "benign_n": 375,
+    "benign_scored_n": 375,
+    "benign_flagged": 107,
+    "benign_rate": 0.2853333333333333,
+    "benign_mean_weight": 0.09945804515484746,
+    "heterogeneous_n": 125,
+    "heterogeneous_scored_n": 125,
+    "heterogeneous_flagged": 31,
+    "heterogeneous_rate": 0.248,
+    "heterogeneous_mean_weight": 0.10162586453545758,
+    "malicious_n": 0,
+    "malicious_scored_n": 0,
+    "malicious_flagged": 0,
+    "malicious_rate": null,
+    "malicious_mean_weight": null,
+    "auc": null,
+    "heterogeneous_weight_ratio": 1.0217963200185063,
+    "tp": 0,
+    "fp": 138,
+    "fn": 0,
+    "tn": 362,
+    "precision": 0.0,
+    "recall": null,
+    "f1": null,
+    "malicious_weight_mass_per_round": 0.0
+  },
+  "config_hash": "0a7389c8aab137be7463590adc28aaf27e45a6e03a323a1f1a1ce93af0a88ae8",
+  "total_round_seconds": 7791.898253839463,
+  "test": {
+    "sst2": {
+      "n": 256,
+      "accuracy": 0.9375,
+      "loss": 0.13965096599440585
+    },
+    "imdb": {
+      "n": 256,
+      "accuracy": 0.92578125,
+      "loss": 0.10751254649562725
+    }
+  },
+  "test_macro_accuracy": 0.931640625,
+  "asr": null
+}
