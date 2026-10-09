@@ -4,7 +4,38 @@
     "warnings": 3,
     "scope": "Existing 29 tests plus dense source parity, real DDPG updates, exact resume, final-test isolation, paired sampling, backdoor-scale and adaptive audit"
   },
-  "server_tests": "pending",
-  "real_model_preflight": "pending",
-  "formal_training_started": false
+  "server_tests": {
+    "passed": 36,
+    "warnings": 3,
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.12",
+    "torch": "2.8.0+cu128"
+  },
+  "real_model_preflight": {
+    "loader_optimizer_restore": "PASS",
+    "model_sha256": "88c142557820ccad55bb59756bfcfcf891de9cc6202816bd346445188a0ed342",
+    "backdoor_scale": {
+      "status": "PASS",
+      "rounds": 2,
+      "max_steps": 1,
+      "seconds": [
+        9.42,
+        8.24
+      ]
+    },
+    "adaptive": {
+      "status": "PASS",
+      "rounds": 2,
+      "max_steps": 1,
+      "iterations": 20,
+      "seconds": [
+        39.1,
+        42.58
+      ]
+    },
+    "research_evidence": false
+  },
+  "formal_training_started": false,
+  "training_source_hash": "2f155200c07ac92231e385817cdd272a33eec068f74acd3339d8578151ab1d73",
+  "newline_note": "After the 36-test runs, JSON serialization was normalized to LF for Windows/Linux file hash parity; no scoring/training arithmetic changed."
 }

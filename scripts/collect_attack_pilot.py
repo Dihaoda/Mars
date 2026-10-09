@@ -101,6 +101,19 @@ def collect(archive_id=None):
               'completed_rounds': sum(r['completed_rounds'] for r in rows),
               'total_rounds': 1000, 'current': current, 'runs': rows}
     write_json(destination / 'progress.json', status)
+    lines = ['# Mars 首阶段攻击实验进度', '',
+             f"更新时间（UTC）：{status['updated_utc']}。已完成 {status['completed_runs']}/20 项、{status['completed_rounds']}/1000 轮。", '',
+             '所有结果均为 seed 2026、同一数据划分的探索性试验。未完成项不报告最终准确率；合成/缩步核验不计入研究结果。', '',
+             '[冻结实验协议](../../docs/attack-pilot-20261009.md) · [工作一迁移审计](../../docs/workone-port.md) · [完整进度 JSON](progress.json)', '',
+             '| 实验 | 状态 | 已完成轮数 | 第50轮干净准确率 | 后门 ASR |',
+             '|---|---|---:|---:|---:|']
+    for r in rows:
+        metric = lambda key: f"{100*r[key]:.2f}%" if r.get(key) is not None else '—'
+        label = f"[{r['id']}]({r['id']}/summary.json)" if r['status'] == 'complete' else r['id']
+        lines.append(f"| {label} | {r['status']} | {r['completed_rounds']}/50 | {metric('test_macro_accuracy')} | {metric('asr_macro')} |")
+    lines += ['', '每轮客户端判定、权重及控制器轨迹保存在各实验的 rounds.json；完成后增加 summary.json、CSV 和备份清单。',
+              '二分类检测指标只适用于输出恶意后验的 H-FedSA 方法。其他方法记 NA。实例不会自动关机，队列不含后续种子或新方法。', '']
+    (destination / 'README.md').write_text('\n'.join(lines), encoding='utf-8', newline='\n')
     print({k: v for k, v in status.items() if k != 'runs'})
     return status
 
