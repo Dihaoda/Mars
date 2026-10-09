@@ -1,6 +1,6 @@
 {
-  "checked_utc": "2026-10-09T12:32:43.472763+00:00",
-  "snapshot_utc": "2026-10-09T12:32:36.893833+00:00",
+  "checked_utc": "2026-10-09T12:46:05.610213+00:00",
+  "snapshot_utc": "2026-10-09T12:45:57.720953+00:00",
   "status": "pass",
   "source_hash": "2f155200c07ac92231e385817cdd272a33eec068f74acd3339d8578151ab1d73",
   "checks": [
@@ -18,7 +18,7 @@
     },
     {
       "id": "hfedsa_ddpg-effective-none-seed2026",
-      "verified_rounds": 43
+      "verified_rounds": 48
     }
   ],
   "note": "Integrity checks only; no final effectiveness conclusion from incomplete experiments."
