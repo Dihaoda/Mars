@@ -175,6 +175,7 @@ def run_condition(backend, cfg, name, data, initial, identity, k):
                   'base_hash': base_hash, 'output_hash': state_digest(state),
                   'detection': metrics(flags, roles), 'evaluation': evaluation, 'vetting': details,
                   'clients': [{'id': i, 'role': roles[i], 'predicted_malicious': flags[i],
+                               'local_adapter_sha256': state_digest(states[i]),
                                'weight': 0 if flags[i] else counts[i]/accepted_n, 'n': counts[i],
                                'poison_positions': poisoning[i], 'training': training[i]}
                               for i in range(cfg['clients'])],
