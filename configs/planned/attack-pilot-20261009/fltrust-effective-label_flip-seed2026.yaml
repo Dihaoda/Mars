@@ -1,0 +1,96 @@
+seed: 2026
+model:
+  backend: qwen
+  name: Qwen/Qwen2.5-0.5B
+  revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
+  rank: 4
+  alpha: 8
+  dropout: 0.0
+  max_length: 256
+  targets:
+  - q_proj
+  - v_proj
+  dtype: bfloat16
+data:
+  kind: hf
+  seed: 42
+  clients: 20
+  heterogeneous_clients: 5
+  samples_per_client: 500
+  mix_ratio: 0.4
+  root_per_domain: 128
+  validation_per_domain: 64
+  test_per_domain: 256
+  root_domains:
+  - sst2
+  revisions:
+    sst2: 8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb
+    imdb: e6281661ce1c48d982bc483cf8a173c1bbeb5d31
+train:
+  rounds: 50
+  clients_per_round: 10
+  local_epochs: 1
+  batch_size: 4
+  gradient_accumulation: 4
+  learning_rate: 0.0002
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  max_steps: null
+  sampling: stratified
+  sampling_malicious_fraction: 0.2
+  malicious_per_round: 2
+  heterogeneous_per_round:
+  - 2
+  - 3
+defense:
+  name: fltrust
+  representation: effective
+  beta: 0.2
+  gmm_reg: 0.0001
+  threshold: 0.5
+  clip_factor: 2.0
+  anchor_repeats: 2
+  anchor_steps: 2
+  anchor_fraction: 0.8
+  anchor_trigger: remarkable sapphire
+  anchor_match_min: 0.0
+  probe_entropy: 0.7
+  audit_fraction: 0.1
+aggregation:
+  mode: effective
+  normalize: none
+attack:
+  name: label_flip
+  malicious_fraction: 0.2
+  poison_fraction: 1.0
+  target_label: 1
+  trigger: quiet amber
+  scale: 5.0
+  adaptive_iterations: 20
+  adaptive_probe_samples: 16
+  adaptive_step: 0.15
+  adaptive_sigma: 0.05
+  adaptive_match_penalty: 0.1
+  adaptive_norm_bound: 10.0
+workone:
+  static_beta: 0.35
+  malicious_penalty: 0.8
+  gmm_reg_covar: 1.0e-06
+  security_penalty: 0.2
+  ddpg:
+    state_dim: 32
+    hidden_dim: 64
+    actor_lr: 0.001
+    critic_lr: 0.001
+    gamma: 0.95
+    tau: 0.02
+    replay_capacity: 1000
+    batch_size: 16
+    exploration_noise: 0.05
+    min_beta: 0.0
+    max_beta: 1.0
+runtime:
+  device: cuda
+  threads: 2
+  cache_updates: true
+  deterministic: true

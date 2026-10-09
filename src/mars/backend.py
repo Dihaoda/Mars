@@ -186,3 +186,18 @@ class Backend:
             return [self.evaluate(state, validation[domain])["loss"] for domain in sorted(validation)]
         finally:
             self.load(saved)
+
+    @torch.no_grad()
+    def attack_loss(self, state, rows):
+        """Attacker-owned clean-label NLL; never accesses validation or test."""
+        self.load(state)
+        self.model.eval()
+        numerator = denominator = 0.0
+        for start in range(0, len(rows), self.cfg['train']['batch_size']):
+            losses, counts = self._losses(rows[start:start + self.cfg['train']['batch_size']])
+            numerator += float(losses.sum())
+            denominator += float(counts.sum())
+        value = numerator / max(denominator, 1)
+        if not torch.isfinite(torch.tensor(value)):
+            raise FloatingPointError('Non-finite attacker probe loss')
+        return value

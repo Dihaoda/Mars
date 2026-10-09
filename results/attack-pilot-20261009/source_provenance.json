@@ -1,0 +1,29 @@
+{
+  "source": "User supplied H-FedSA.zip",
+  "files": [
+    {
+      "original_path": "src/defenses/hfedsa.py",
+      "vendored_path": "src/mars/legacy_hfedsa.py",
+      "original_sha256": "28cea8777aaabb6f6efdb72182478aab6835f4084ef90c7f19d10fd6458c320e",
+      "vendored_sha256": "9ccbc3671c44acedf6fcddbbbfbdbc9f9f1b1880d041a06c848822eb554a500e",
+      "normalized_text_verified": true,
+      "modifications": "Import namespace only; newline normalization"
+    },
+    {
+      "original_path": "src/defenses/ddpg_beta_agent.py",
+      "vendored_path": "src/mars/legacy_ddpg.py",
+      "original_sha256": "953f8753180540dfe907cb0cff17131181e3fa84f54e46e2d6bac022b94a9f9d",
+      "vendored_sha256": "953f8753180540dfe907cb0cff17131181e3fa84f54e46e2d6bac022b94a9f9d",
+      "normalized_text_verified": true,
+      "modifications": "Import namespace only; newline normalization"
+    },
+    {
+      "original_path": "src/federated/tensor_ops.py",
+      "vendored_path": "src/mars/legacy_tensor_ops.py",
+      "original_sha256": "0ce16a236491185b3c4d3b22c4f4b9e3be651556718c9fe0b3a682caeedada75",
+      "vendored_sha256": "0ce16a236491185b3c4d3b22c4f4b9e3be651556718c9fe0b3a682caeedada75",
+      "normalized_text_verified": true,
+      "modifications": "Import namespace only; newline normalization"
+    }
+  ]
+}

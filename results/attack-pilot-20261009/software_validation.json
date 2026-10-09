@@ -1,0 +1,10 @@
+{
+  "windows": {
+    "passed": 36,
+    "warnings": 3,
+    "scope": "Existing 29 tests plus dense source parity, real DDPG updates, exact resume, final-test isolation, paired sampling, backdoor-scale and adaptive audit"
+  },
+  "server_tests": "pending",
+  "real_model_preflight": "pending",
+  "formal_training_started": false
+}

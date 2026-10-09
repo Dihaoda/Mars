@@ -111,9 +111,26 @@ def replay(cfg, args):
         bundle = load_bundle(cfg, args.data)
         metadata = read_json(Path(args.cache).parent / "metadata.json")
         backend = Backend(cfg, metadata["model_revision"])
-    weights, diagnostics, info = decide(cached["locals"], cached["counts"], cached["base"], cached["root"],
-                                         cached["scale"], cfg, cached["seed"], anchors,
-                                         (lambda s: backend.probe(s, bundle.validation)) if backend else None)
+    if cfg['defense']['name'] in {'hfedsa_ddpg', 'hfedsa_workone_static'}:
+        import copy
+        from .utils import rng_state, restore_rng
+        controller = copy.deepcopy(cached.get('controller_before'))
+        if controller is None or cfg['workone'] != cached['config'].get('workone') or cfg['defense']['name'] != controller.name:
+            raise ValueError('Work-one replay needs a matching saved controller history')
+        if cfg['defense']['threshold'] != cached['config']['defense']['threshold']:
+            raise ValueError('Work-one replay preserves the original detection threshold')
+        controller.representation = cfg['defense']['representation']
+        previous_rng = rng_state()
+        try:
+            restore_rng(cached['scoring_rng'])
+            weights, diagnostics, info = controller.score(cached['locals'], cached['base'], cached['root'], cached['scale'], cached['selected'])
+        finally:
+            restore_rng(previous_rng)
+        info['history'] = 'source controller history held fixed; not an alternate closed loop'
+    else:
+        weights, diagnostics, info = decide(cached["locals"], cached["counts"], cached["base"], cached["root"],
+                                             cached["scale"], cfg, cached["seed"], anchors,
+                                             (lambda s: backend.probe(s, bundle.validation)) if backend else None)
     write_json(args.out, {"kind": "offline_scoring_only", "source_cache": str(args.cache), "config": cfg,
                           "selected": cached["selected"], "weights": weights, "diagnostics": diagnostics,
                           "defense": info, "warning": "This is not a closed-loop training result; no final accuracy or ASR claim is valid."})

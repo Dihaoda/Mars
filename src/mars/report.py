@@ -44,6 +44,8 @@ def summarize(directories, output):
             continue
         c = m["config"]
         group = {k: c[k] for k in ("model", "data", "train", "defense", "aggregation", "attack")}
+        if c['defense']['name'] in {'hfedsa_ddpg', 'hfedsa_workone_static'}:
+            group['workone'] = c['workone']
         group["resolved_model_revision"] = m["model_revision"]
         group["data_hash"] = m["data_hash"]
         group["source_hash"] = m["source_hash"]

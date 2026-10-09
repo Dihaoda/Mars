@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 import importlib.metadata
 import os
 import platform
@@ -17,6 +18,9 @@ from .data import load_bundle
 from .defenses import decide
 from .geometry import aggregate
 from .metrics import detection
+from .sampling import select_clients
+from .workone import WorkOneDefense
+from .adaptive_attack import adaptive_attack
 from .utils import digest, git_revision, load_checkpoint, read_json, restore_rng, rng_state, save_checkpoint, write_json
 
 
@@ -100,7 +104,9 @@ def _run(cfg, data_dir, output_dir, resume, until_round):
         metadata = {"schema": 1, "config": cfg, "config_hash": config_hash, "source_hash": code_hash,
                     "data_hash": bundle.manifest["bundle_digest"], "model_revision": backend.revision,
                     "git_commit": git_revision(), "environment": environment(), "synthetic": bundle.manifest["synthetic"],
-                    "method_status": "Independent fixed-beta LoRA implementation; not an exact reproduction of H-FedSA or its DDPG controller.",
+                    "method_status": ("Supplied work-one code port, with validation-only reward and corrected transitions; see docs/workone-port.md."
+                                      if cfg['defense']['name'] in {'hfedsa_ddpg', 'hfedsa_workone_static'} else
+                                      "Independent LoRA implementation; see the frozen protocol for baseline semantics."),
                     "reference_domains": cfg["data"]["root_domains"]}
         write_json(metadata_path, metadata)
         write_json(output_dir / "data_manifest.json", bundle.manifest)
@@ -114,6 +120,7 @@ def _run(cfg, data_dir, output_dir, resume, until_round):
     completed = checkpoint["completed_round"] if checkpoint else 0
     history = checkpoint["history"] if checkpoint else []
     all_clients = checkpoint["client_history"] if checkpoint else []
+    controller = (checkpoint['controller'] if checkpoint else WorkOneDefense(cfg)) if cfg['defense']['name'] in {'hfedsa_ddpg', 'hfedsa_workone_static'} else None
     if checkpoint:
         restore_rng(checkpoint["rng"])
     total_rounds = cfg["train"]["rounds"]
@@ -125,7 +132,7 @@ def _run(cfg, data_dir, output_dir, resume, until_round):
         if backend.device.type == "cuda":
             torch.cuda.reset_peak_memory_stats()
         seed = cfg["seed"] + 100000 * round_index
-        selected = random.Random(seed).sample(sorted(bundle.clients), cfg["train"]["clients_per_round"])
+        selected = select_clients(cfg, bundle, round_index)
         local_states, counts, local_stats = [], [], []
         base = state
         for client in selected:
@@ -134,7 +141,7 @@ def _run(cfg, data_dir, output_dir, resume, until_round):
             if bundle.roles[client] == "malicious":
                 rows, poison_count = poison(rows, cfg["attack"], seed + client)
             local, stats = backend.train(base, rows, seed + client)
-            if bundle.roles[client] == "malicious" and cfg["attack"]["name"] == "scale":
+            if bundle.roles[client] == "malicious" and cfg["attack"]["name"] in {"scale", "backdoor_scale"}:
                 local, scaling = scale_update(local, base, backend.scale, cfg["attack"]["scale"])
                 stats["scaling_projection_error"] = scaling["svd_relative_error"]
             local_states.append(local)
@@ -142,11 +149,21 @@ def _run(cfg, data_dir, output_dir, resume, until_round):
             local_stats.append({**stats, "poisoned_examples": poison_count})
         root_rows = [row for domain in cfg["data"]["root_domains"] for row in bundle.root[domain]]
         root, root_stats = backend.train(base, root_rows, seed + 80001)
+        attack_records, original_malicious = [], {}
+        if cfg['attack']['name'] == 'adaptive':
+            local_states, attack_records, original_malicious = adaptive_attack(
+                backend, local_states, base, root, selected, bundle.roles, bundle.clients, cfg, seed)
+            write_json(output_dir / f'attack_{round_index:03}.json', attack_records)
         anchors = make_anchors(backend, base, bundle, cfg, seed + 90001) if cfg["defense"]["name"] in {"anchor_gmm", "hybrid"} else []
         reference_finished = time.perf_counter()
-        weights, diagnostics, defense_info = decide(
-            local_states, counts, base, root, backend.scale, cfg, seed,
-            anchors=anchors, probe=lambda s: backend.probe(s, bundle.validation))
+        controller_before = copy.deepcopy(controller)
+        scoring_rng = rng_state()
+        if controller is not None:
+            weights, diagnostics, defense_info = controller.score(local_states, base, root, backend.scale, selected)
+        else:
+            weights, diagnostics, defense_info = decide(
+                local_states, counts, base, root, backend.scale, cfg, seed,
+                anchors=anchors, probe=lambda s: backend.probe(s, bundle.validation))
         normalize = "root" if cfg["defense"]["name"] == "fltrust" else cfg["aggregation"]["normalize"]
         state, aggregation_info = aggregate(base, local_states, weights, root, backend.scale,
                                              cfg["aggregation"]["mode"], normalize, cfg["defense"]["clip_factor"])
@@ -155,9 +172,11 @@ def _run(cfg, data_dir, output_dir, resume, until_round):
         client_rows = [{"round": round_index, "client_id": client, "true_role": bundle.roles[client],
                         "samples": counts[i], **diagnostics[i], **local_stats[i]} for i, client in enumerate(selected)]
         validation = _evaluate(backend, state, bundle.validation)
+        controller_trace = controller.observe_validation(validation, diagnostics) if controller else None
         result = {"round": round_index, "selected_clients": selected, "validation": validation,
                   "detection": detection(client_rows), "defense": defense_info, "aggregation": aggregation_info,
                   "root_training": root_stats,
+                  "controller": controller_trace, "adaptive_attack": attack_records,
                   "server_anchor_count": len(anchors),
                   "training_and_references_seconds": reference_finished - started,
                   "scoring_and_aggregation_seconds": aggregate_finished - reference_finished,
@@ -169,14 +188,19 @@ def _run(cfg, data_dir, output_dir, resume, until_round):
             save_checkpoint(output_dir / f"updates_{round_index:03}.pt", {
                 "base": base, "locals": local_states, "root": root, "anchors": anchors,
                 "counts": counts, "selected": selected, "seed": seed, "scale": backend.scale,
-                "config": cfg, "source_hash": code_hash})
+                "config": cfg, "source_hash": code_hash, "controller_before": controller_before,
+                "scoring_rng": scoring_rng, "original_malicious": original_malicious})
         history.append(result)
         all_clients.extend(client_rows)
         write_json(output_dir / f"round_{round_index:03}.json", {"summary": result, "clients": client_rows})
         save_checkpoint(checkpoint_path, {"config_hash": config_hash, "source_hash": code_hash,
                                           "data_hash": bundle.manifest["bundle_digest"], "global_state": state,
                                           "completed_round": round_index, "rng": rng_state(),
+                                          "controller": controller,
                                           "history": history, "client_history": all_clients})
+        write_json(output_dir / 'progress.json', {'status': 'running', 'completed_rounds': round_index,
+                   'total_rounds': total_rounds, 'last_round': result,
+                   'config_hash': config_hash, 'source_hash': code_hash})
         print(f"round={round_index}/{total_rounds} seconds={result['total_seconds']:.2f} "
               f"validation={ {k: v['accuracy'] for k, v in validation.items()} }", flush=True)
         completed = round_index
@@ -189,7 +213,7 @@ def _run(cfg, data_dir, output_dir, resume, until_round):
         summary["test"] = _evaluate(backend, state, bundle.test)
         summary["test_macro_accuracy"] = sum(x["accuracy"] for x in summary["test"].values()) / len(summary["test"])
         summary["asr"] = None
-        if cfg["attack"]["name"] == "backdoor":
+        if cfg["attack"]["name"] in {"backdoor", "backdoor_scale"}:
             groups = {domain: triggered_test(rows, cfg["attack"]) for domain, rows in bundle.test.items()}
             summary["asr"] = _evaluate(backend, state, groups)
             summary["asr_macro"] = sum(x["accuracy"] for x in summary["asr"].values()) / len(summary["asr"])
@@ -198,4 +222,6 @@ def _run(cfg, data_dir, output_dir, resume, until_round):
         if hasattr(backend.tokenizer, "save_pretrained"):
             backend.tokenizer.save_pretrained(output_dir / "adapter")
     write_json(output_dir / "summary.json", summary)
+    write_json(output_dir / 'progress.json', {**summary, 'total_rounds': total_rounds,
+                                             'source_hash': code_hash})
     return summary

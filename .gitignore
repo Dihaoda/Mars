@@ -8,6 +8,7 @@ __pycache__/
 data/
 runs/
 cache/
+backups/
 *.pt
 *.safetensors
 *.zip

@@ -16,7 +16,9 @@ DEFAULT = {
              "root_domains": ["sst2"], "revisions": {"sst2": "main", "imdb": "main"}},
     "train": {"rounds": 10, "clients_per_round": 10, "local_epochs": 1,
               "batch_size": 4, "gradient_accumulation": 4, "learning_rate": 0.0002,
-              "weight_decay": 0.0, "max_grad_norm": 1.0, "max_steps": None},
+              "weight_decay": 0.0, "max_grad_norm": 1.0, "max_steps": None,
+              "sampling": "uniform", "sampling_malicious_fraction": 0.2,
+              "malicious_per_round": 2, "heterogeneous_per_round": [2, 3]},
     "defense": {"name": "hfedsa", "representation": "raw", "beta": 0.2,
                 "gmm_reg": 0.0001, "threshold": 0.5, "clip_factor": 2.0,
                 "anchor_repeats": 2, "anchor_steps": 2, "anchor_fraction": 0.8,
@@ -24,7 +26,16 @@ DEFAULT = {
                 "probe_entropy": 0.7, "audit_fraction": 0.1},
     "aggregation": {"mode": "effective", "normalize": "none"},
     "attack": {"name": "none", "malicious_fraction": 0.0, "poison_fraction": 0.2,
-               "target_label": 1, "trigger": "quiet amber", "scale": 5.0},
+               "target_label": 1, "trigger": "quiet amber", "scale": 5.0,
+               "adaptive_iterations": 20, "adaptive_probe_samples": 16,
+               "adaptive_step": 0.15, "adaptive_sigma": 0.05,
+               "adaptive_match_penalty": 0.1, "adaptive_norm_bound": 10.0},
+    "workone": {"static_beta": 0.35, "malicious_penalty": 0.8,
+                "gmm_reg_covar": 1e-6, "security_penalty": 0.2,
+                "ddpg": {"state_dim": 32, "hidden_dim": 64, "actor_lr": 0.001,
+                         "critic_lr": 0.001, "gamma": 0.95, "tau": 0.02,
+                         "replay_capacity": 1000, "batch_size": 16,
+                         "exploration_noise": 0.05, "min_beta": 0.0, "max_beta": 1.0}},
     "runtime": {"device": "auto", "threads": 2, "cache_updates": True, "deterministic": True},
 }
 
@@ -71,9 +82,9 @@ def validate(c):
         raise ValueError("No-attack experiments must have zero malicious clients")
     if a["name"] != "none" and round(d["clients"] * a["malicious_fraction"]) < 1:
         raise ValueError("Attack configuration selects no malicious clients")
-    if a["name"] not in {"none", "label_flip", "backdoor", "scale"}:
+    if a["name"] not in {"none", "label_flip", "backdoor", "scale", "backdoor_scale", "adaptive"}:
         raise ValueError("Unsupported attack")
-    if f["name"] not in {"fedavg", "hfedsa", "anchor_gmm", "hybrid", "fltrust", "rfa"}:
+    if f["name"] not in {"fedavg", "hfedsa", "anchor_gmm", "hybrid", "fltrust", "rfa", "hfedsa_ddpg", "hfedsa_workone_static"}:
         raise ValueError("Unsupported defense")
     if f["representation"] not in {"raw", "effective"}:
         raise ValueError("Unsupported representation")
@@ -107,3 +118,32 @@ def validate(c):
         raise ValueError("Invalid dtype")
     if not d["root_domains"] or not set(d["root_domains"]) <= {"sst2", "imdb"}:
         raise ValueError("Invalid root domains")
+    if t['sampling'] not in {'uniform', 'stratified'}:
+        raise ValueError('Unknown sampling protocol')
+    if t['sampling'] == 'stratified':
+        candidates = round(d['clients'] * t['sampling_malicious_fraction'])
+        ordinary = d['clients'] - d['heterogeneous_clients'] - candidates
+        if not 0 < t['malicious_per_round'] <= candidates or ordinary < 1:
+            raise ValueError('Invalid stratified attacker candidate pool')
+        if a['name'] != 'none' and a['malicious_fraction'] != t['sampling_malicious_fraction']:
+            raise ValueError('Attacker sampling pool and malicious identities differ')
+        if not t['heterogeneous_per_round']:
+            raise ValueError('Empty heterogeneous sampling schedule')
+        for count in t['heterogeneous_per_round']:
+            rest = t['clients_per_round'] - t['malicious_per_round'] - count
+            if not 0 < count <= d['heterogeneous_clients'] or not 0 < rest <= ordinary:
+                raise ValueError('Impossible stratified round')
+    if a['adaptive_iterations'] < 1 or a['adaptive_probe_samples'] < 2 or a['adaptive_probe_samples'] % 2:
+        raise ValueError('Invalid adaptive attack budget')
+    if min(a['adaptive_step'], a['adaptive_sigma'], a['adaptive_norm_bound']) <= 0 or a['adaptive_match_penalty'] < 0:
+        raise ValueError('Invalid adaptive attack search parameters')
+    if f['name'].startswith('hfedsa_') and f['name'] in {'hfedsa_ddpg', 'hfedsa_workone_static'}:
+        if t['clients_per_round'] < 3:
+            raise ValueError('Work-one GMM requires at least three participating clients')
+        if c['aggregation'] != {'mode': 'effective', 'normalize': 'none'}:
+            raise ValueError('Work-one port requires the frozen effective aggregation protocol')
+        agent = c['workone']['ddpg']
+        if agent['batch_size'] < 2 or agent['replay_capacity'] < agent['batch_size'] or agent['state_dim'] < 24:
+            raise ValueError('Invalid controller state or replay dimensions')
+        if not 0 <= agent['min_beta'] < agent['max_beta'] <= 1:
+            raise ValueError('Invalid controller action range')

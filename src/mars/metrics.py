@@ -20,4 +20,18 @@ def detection(rows):
     ordinary_weight = output["benign_mean_weight"]
     shifted_weight = output["heterogeneous_mean_weight"]
     output["heterogeneous_weight_ratio"] = shifted_weight / ordinary_weight if ordinary_weight and shifted_weight is not None else None
+    classified = [r for r in rows if r['predicted_malicious'] is not None]
+    if classified:
+        tp = sum(r['true_role'] == 'malicious' and r['predicted_malicious'] for r in classified)
+        fp = sum(r['true_role'] != 'malicious' and r['predicted_malicious'] for r in classified)
+        fn = sum(r['true_role'] == 'malicious' and not r['predicted_malicious'] for r in classified)
+        tn = len(classified) - tp - fp - fn
+        output.update(tp=tp, fp=fp, fn=fn, tn=tn,
+                      precision=tp / (tp + fp) if tp + fp else None,
+                      recall=tp / (tp + fn) if tp + fn else None,
+                      f1=2 * tp / (2 * tp + fp + fn) if tp + fn else None)
+    else:
+        output.update({key: None for key in ('tp', 'fp', 'fn', 'tn', 'precision', 'recall', 'f1')})
+    rounds = len({r.get('round', 0) for r in rows})
+    output['malicious_weight_mass_per_round'] = sum(r['weight'] for r in rows if r['true_role'] == 'malicious') / rounds if rounds else None
     return output

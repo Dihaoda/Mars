@@ -8,7 +8,7 @@ from .geometry import combine, delta, effective, refactor
 
 def poison(rows, attack, seed):
     result = [dict(row) for row in rows]
-    if attack["name"] not in {"label_flip", "backdoor"}:
+    if attack["name"] not in {"label_flip", "backdoor", "backdoor_scale"}:
         return result, 0
     candidates = list(range(len(result))) if attack["name"] == "label_flip" else [
         i for i, row in enumerate(result) if row["label"] != attack["target_label"]]

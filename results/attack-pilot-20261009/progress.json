@@ -1,0 +1,152 @@
+{
+  "campaign": "attack-pilot-20261009",
+  "updated_utc": "2026-10-09T08:23:53.116207+00:00",
+  "source_hash": "2f155200c07ac92231e385817cdd272a33eec068f74acd3339d8578151ab1d73",
+  "authorized_runs": 20,
+  "completed_runs": 0,
+  "completed_rounds": 0,
+  "total_rounds": 1000,
+  "current": null,
+  "runs": [
+    {
+      "id": "hfedsa_ddpg-raw-none-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026.yaml"
+    },
+    {
+      "id": "hfedsa_ddpg-effective-none-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-effective-none-seed2026.yaml"
+    },
+    {
+      "id": "fedavg-effective-none-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/fedavg-effective-none-seed2026.yaml"
+    },
+    {
+      "id": "fltrust-effective-none-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/fltrust-effective-none-seed2026.yaml"
+    },
+    {
+      "id": "rfa-effective-none-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/rfa-effective-none-seed2026.yaml"
+    },
+    {
+      "id": "hfedsa_ddpg-raw-label_flip-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-raw-label_flip-seed2026.yaml"
+    },
+    {
+      "id": "hfedsa_ddpg-effective-label_flip-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-effective-label_flip-seed2026.yaml"
+    },
+    {
+      "id": "fedavg-effective-label_flip-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/fedavg-effective-label_flip-seed2026.yaml"
+    },
+    {
+      "id": "fltrust-effective-label_flip-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/fltrust-effective-label_flip-seed2026.yaml"
+    },
+    {
+      "id": "rfa-effective-label_flip-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/rfa-effective-label_flip-seed2026.yaml"
+    },
+    {
+      "id": "hfedsa_ddpg-raw-backdoor_scale-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-raw-backdoor_scale-seed2026.yaml"
+    },
+    {
+      "id": "hfedsa_ddpg-effective-backdoor_scale-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-effective-backdoor_scale-seed2026.yaml"
+    },
+    {
+      "id": "fedavg-effective-backdoor_scale-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/fedavg-effective-backdoor_scale-seed2026.yaml"
+    },
+    {
+      "id": "fltrust-effective-backdoor_scale-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/fltrust-effective-backdoor_scale-seed2026.yaml"
+    },
+    {
+      "id": "rfa-effective-backdoor_scale-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/rfa-effective-backdoor_scale-seed2026.yaml"
+    },
+    {
+      "id": "hfedsa_ddpg-raw-adaptive-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-raw-adaptive-seed2026.yaml"
+    },
+    {
+      "id": "hfedsa_ddpg-effective-adaptive-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-effective-adaptive-seed2026.yaml"
+    },
+    {
+      "id": "fedavg-effective-adaptive-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/fedavg-effective-adaptive-seed2026.yaml"
+    },
+    {
+      "id": "fltrust-effective-adaptive-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/fltrust-effective-adaptive-seed2026.yaml"
+    },
+    {
+      "id": "rfa-effective-adaptive-seed2026",
+      "status": "pending",
+      "completed_rounds": 0,
+      "total_rounds": 50,
+      "config": "configs/planned/attack-pilot-20261009/rfa-effective-adaptive-seed2026.yaml"
+    }
+  ]
+}
