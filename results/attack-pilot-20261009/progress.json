@@ -1,13 +1,13 @@
 {
   "campaign": "attack-pilot-20261009",
-  "updated_utc": "2026-10-09T12:45:57.720953+00:00",
+  "updated_utc": "2026-10-09T12:58:54.906344+00:00",
   "source_hash": "2f155200c07ac92231e385817cdd272a33eec068f74acd3339d8578151ab1d73",
   "authorized_runs": 20,
-  "completed_runs": 1,
-  "completed_rounds": 98,
+  "completed_runs": 2,
+  "completed_rounds": 102,
   "total_rounds": 1000,
   "current": {
-    "id": "hfedsa_ddpg-effective-none-seed2026",
+    "id": "fedavg-effective-none-seed2026",
     "status": "running"
   },
   "runs": [
@@ -61,29 +61,70 @@
     },
     {
       "id": "hfedsa_ddpg-effective-none-seed2026",
-      "status": "running",
-      "completed_rounds": 48,
+      "status": "complete",
+      "completed_rounds": 50,
       "total_rounds": 50,
       "config": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-effective-none-seed2026.yaml",
       "last_validation": {
         "sst2": {
           "n": 64,
           "accuracy": 0.90625,
-          "loss": 0.2054351654223865
+          "loss": 0.20236057043621258
         },
         "imdb": {
           "n": 64,
           "accuracy": 0.875,
-          "loss": 0.19147138575499412
+          "loss": 0.1931388017255813
         }
+      },
+      "test_macro_accuracy": 0.935546875,
+      "asr_macro": null,
+      "detection": {
+        "benign_n": 375,
+        "benign_scored_n": 375,
+        "benign_flagged": 118,
+        "benign_rate": 0.31466666666666665,
+        "benign_mean_weight": 0.09770604314864484,
+        "heterogeneous_n": 125,
+        "heterogeneous_scored_n": 125,
+        "heterogeneous_flagged": 37,
+        "heterogeneous_rate": 0.296,
+        "heterogeneous_mean_weight": 0.10688187055406549,
+        "malicious_n": 0,
+        "malicious_scored_n": 0,
+        "malicious_flagged": 0,
+        "malicious_rate": null,
+        "malicious_mean_weight": null,
+        "auc": null,
+        "heterogeneous_weight_ratio": 1.0939125883079825,
+        "tp": 0,
+        "fp": 155,
+        "fn": 0,
+        "tn": 345,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "malicious_weight_mass_per_round": 0.0
       }
     },
     {
       "id": "fedavg-effective-none-seed2026",
-      "status": "pending",
-      "completed_rounds": 0,
+      "status": "running",
+      "completed_rounds": 2,
       "total_rounds": 50,
-      "config": "configs/planned/attack-pilot-20261009/fedavg-effective-none-seed2026.yaml"
+      "config": "configs/planned/attack-pilot-20261009/fedavg-effective-none-seed2026.yaml",
+      "last_validation": {
+        "sst2": {
+          "n": 64,
+          "accuracy": 0.859375,
+          "loss": 0.2037128053198103
+        },
+        "imdb": {
+          "n": 64,
+          "accuracy": 0.84375,
+          "loss": 0.1988006184110418
+        }
+      }
     },
     {
       "id": "fltrust-effective-none-seed2026",

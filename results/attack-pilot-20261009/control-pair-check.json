@@ -1,0 +1,26 @@
+{
+  "checked_utc": "2026-10-09T13:02:04.492543+00:00",
+  "status": "pass",
+  "runs": [
+    "hfedsa_ddpg-raw-none-seed2026",
+    "hfedsa_ddpg-effective-none-seed2026"
+  ],
+  "source_hash": "2f155200c07ac92231e385817cdd272a33eec068f74acd3339d8578151ab1d73",
+  "data_hash": "bd210edce75e25bd00a1685afbd501b3fdfea8ca176b94fc58981c6f6745276e",
+  "config_differences": [
+    {
+      "path": "defense.representation",
+      "raw": "raw",
+      "effective": "effective"
+    }
+  ],
+  "paired_sampling_rounds": 50,
+  "paired_client_role_rounds": 500,
+  "summary_counts_match_round_records": true,
+  "threshold": 0.5,
+  "controller_updates_each": 34,
+  "training_seeds": [
+    2026
+  ],
+  "interpretation": "Closed-loop no-attack controls. No offline replay or attack-resistance inference."
+}
