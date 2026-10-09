@@ -1,5 +1,7 @@
 # Mars：联邦 LoRA 安全实验
 
+本分支 `experiment/indexguard-heterogeneity` 保存 **IndexGuard 异质良性客户端配对预实验**，首批为一个种子、0% / 40% 域替换、各 10 轮。参见 [冻结实验协议](docs/indexguard-heterogeneity-20261009.md)、[配置](configs/indexguard/pilot.json) 和 [逐轮结果目录](results/indexguard-heterogeneity-20261009)。此前训练队列保持停止。下面为原项目历史说明。
+
 这是开题报告第二项工作的实验平台。使用单张 GPU 顺序模拟客户端，研究正常异质更新的误判、安全检测与低秩聚合。
 
 **当前是可验证的初始实现，不是论文实验结果。** `hfedsa` 为依据论文思路独立编写的固定 beta 迁移版，未实现原论文 DDPG，不宣称复现原始 LoRA 先导数值。尚未在 AutoDL 上验证的结果不能视为 GPU 实验完成。

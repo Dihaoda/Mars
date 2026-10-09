@@ -1,0 +1,56 @@
+{
+  "kind": "implementation_audit_only",
+  "not_research_evidence": true,
+  "upstream_commit": "6e745f81cdee8ea56830bcc1dce719259430954e",
+  "source_sha256": "57fd56b6884172ea1c578ba746b5121aca8d3b2178cb2be959821da7360ceeee",
+  "synthetic_checks": {
+    "uniform_ios_default_flagged_clients": 4,
+    "uniform_ios_no_fallback_flagged_clients": 0,
+    "reversed_semantic_predictions_actual_accuracy": 0.0,
+    "reversed_semantic_predictions_reported_accuracy": 1.0
+  },
+  "static_findings": [
+    {
+      "lines": [
+        293,
+        296,
+        442,
+        1406
+      ],
+      "finding": "Main calls detector with defaults Kc=5, beta=0.9, fallback=max_cohesion; CLI cluster_k is not passed. Paper Appendix F.1 specifies L=2, beta=0.7, gamma=0.05 for shared-trigger tests; paper rule does not require a forced-positive fallback."
+    },
+    {
+      "lines": [
+        575,
+        662,
+        677
+      ],
+      "finding": "Metric helper uses true malicious IDs to choose the more accurate label mapping, although detector labels already have benign/suspicious semantics."
+    },
+    {
+      "lines": [
+        1377,
+        1392,
+        1400,
+        1406
+      ],
+      "finding": "Main averages all received adapters before detection and does not apply detected exclusions to that aggregation."
+    },
+    {
+      "lines": [
+        1417,
+        1430,
+        1455
+      ],
+      "finding": "Clean/ASR evaluation and per-round CSV writes are commented out; main exits early at reported accuracy 1.0."
+    },
+    {
+      "lines": [
+        262,
+        1234
+      ],
+      "finding": "Top-K uses a fixed fraction; paper Section 5.3 instead describes a one-time coverage-and-stability calibration."
+    }
+  ],
+  "interpretation": "The current public script cannot be treated as a faithful end-to-end reproduction without documenting and resolving these discrepancies. These synthetic checks do not estimate FPR under real heterogeneous LLM data, and do not establish that published experiments used this exact code."
+}
