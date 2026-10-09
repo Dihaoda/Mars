@@ -1,0 +1,15 @@
+{
+  "run": "hfedsa_ddpg-raw-none-seed2026",
+  "checked_utc": "2026-10-09T09:21:38.106788+00:00",
+  "status": "pass",
+  "source_hash": "2f155200c07ac92231e385817cdd272a33eec068f74acd3339d8578151ab1d73",
+  "reference": "updates_017.pt controller_before (before first optimizer update)",
+  "checkpoint_completed_round": 19,
+  "controller_updates": 3,
+  "max_absolute_parameter_change": {
+    "actor": 0.0030048340559005737,
+    "critic": 0.0030027106404304504
+  },
+  "finite_parameters": true,
+  "interpretation": "Confirms optimizer activity only, not defense effectiveness."
+}
