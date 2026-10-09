@@ -1,0 +1,228 @@
+{
+  "identity": "def6b2b5ecb927df43197ccc81dc12cb8fd911c9835575aecf7a839a32fd45b6",
+  "k": 824692,
+  "dimensions": 2293760,
+  "k_fraction": 0.3595371791294643,
+  "clients": [
+    {
+      "client": 0,
+      "coverage_k": 824688,
+      "selected_k": 824688,
+      "stability": 0.947961330022182,
+      "dimensions": 2293760
+    },
+    {
+      "client": 1,
+      "coverage_k": 824733,
+      "selected_k": 824733,
+      "stability": 0.9486969318151046,
+      "dimensions": 2293760
+    },
+    {
+      "client": 2,
+      "coverage_k": 824667,
+      "selected_k": 824667,
+      "stability": 0.9483642084219044,
+      "dimensions": 2293760
+    },
+    {
+      "client": 3,
+      "coverage_k": 824694,
+      "selected_k": 824694,
+      "stability": 0.9481444026511651,
+      "dimensions": 2293760
+    },
+    {
+      "client": 4,
+      "coverage_k": 824652,
+      "selected_k": 824652,
+      "stability": 0.9490201119179161,
+      "dimensions": 2293760
+    },
+    {
+      "client": 5,
+      "coverage_k": 824707,
+      "selected_k": 824707,
+      "stability": 0.9481933179500922,
+      "dimensions": 2293760
+    },
+    {
+      "client": 6,
+      "coverage_k": 824689,
+      "selected_k": 824689,
+      "stability": 0.9496852752977182,
+      "dimensions": 2293760
+    },
+    {
+      "client": 7,
+      "coverage_k": 824759,
+      "selected_k": 824759,
+      "stability": 0.9503285202101462,
+      "dimensions": 2293760
+    },
+    {
+      "client": 8,
+      "coverage_k": 824761,
+      "selected_k": 824761,
+      "stability": 0.948405255178975,
+      "dimensions": 2293760
+    },
+    {
+      "client": 9,
+      "coverage_k": 824641,
+      "selected_k": 824641,
+      "stability": 0.9491022962315318,
+      "dimensions": 2293760
+    },
+    {
+      "client": 10,
+      "coverage_k": 824638,
+      "selected_k": 824638,
+      "stability": 0.9497945361075608,
+      "dimensions": 2293760
+    },
+    {
+      "client": 11,
+      "coverage_k": 824609,
+      "selected_k": 824609,
+      "stability": 0.947766759761293,
+      "dimensions": 2293760
+    },
+    {
+      "client": 12,
+      "coverage_k": 824701,
+      "selected_k": 824701,
+      "stability": 0.9475583676184863,
+      "dimensions": 2293760
+    },
+    {
+      "client": 13,
+      "coverage_k": 824665,
+      "selected_k": 824665,
+      "stability": 0.9522335332124762,
+      "dimensions": 2293760
+    },
+    {
+      "client": 14,
+      "coverage_k": 824699,
+      "selected_k": 824699,
+      "stability": 0.9484838306662997,
+      "dimensions": 2293760
+    },
+    {
+      "client": 15,
+      "coverage_k": 824624,
+      "selected_k": 824624,
+      "stability": 0.9515128511095158,
+      "dimensions": 2293760
+    },
+    {
+      "client": 16,
+      "coverage_k": 824757,
+      "selected_k": 824757,
+      "stability": 0.9471395817192215,
+      "dimensions": 2293760
+    },
+    {
+      "client": 17,
+      "coverage_k": 824673,
+      "selected_k": 824673,
+      "stability": 0.9473443817529291,
+      "dimensions": 2293760
+    },
+    {
+      "client": 18,
+      "coverage_k": 824679,
+      "selected_k": 824679,
+      "stability": 0.9478948778858198,
+      "dimensions": 2293760
+    },
+    {
+      "client": 19,
+      "coverage_k": 824676,
+      "selected_k": 824676,
+      "stability": 0.9489096323889624,
+      "dimensions": 2293760
+    },
+    {
+      "client": 20,
+      "coverage_k": 824743,
+      "selected_k": 824743,
+      "stability": 0.9477275547251286,
+      "dimensions": 2293760
+    },
+    {
+      "client": 21,
+      "coverage_k": 824688,
+      "selected_k": 824688,
+      "stability": 0.9479633509884952,
+      "dimensions": 2293760
+    },
+    {
+      "client": 22,
+      "coverage_k": 824700,
+      "selected_k": 824700,
+      "stability": 0.9491083626369184,
+      "dimensions": 2293760
+    },
+    {
+      "client": 23,
+      "coverage_k": 824719,
+      "selected_k": 824719,
+      "stability": 0.9507642401027906,
+      "dimensions": 2293760
+    },
+    {
+      "client": 24,
+      "coverage_k": 824694,
+      "selected_k": 824694,
+      "stability": 0.9491476030301339,
+      "dimensions": 2293760
+    },
+    {
+      "client": 25,
+      "coverage_k": 824667,
+      "selected_k": 824667,
+      "stability": 0.9497287996245758,
+      "dimensions": 2293760
+    },
+    {
+      "client": 26,
+      "coverage_k": 824721,
+      "selected_k": 824721,
+      "stability": 0.9466187150967822,
+      "dimensions": 2293760
+    },
+    {
+      "client": 27,
+      "coverage_k": 824728,
+      "selected_k": 824728,
+      "stability": 0.9463706013780705,
+      "dimensions": 2293760
+    },
+    {
+      "client": 28,
+      "coverage_k": 824651,
+      "selected_k": 824651,
+      "stability": 0.9488886813937047,
+      "dimensions": 2293760
+    },
+    {
+      "client": 29,
+      "coverage_k": 824790,
+      "selected_k": 824790,
+      "stability": 0.9480251538775527,
+      "dimensions": 2293760
+    }
+  ],
+  "settings": {
+    "resamples": 3,
+    "examples_per_resample": 64,
+    "coverage": 0.9,
+    "stability": 0.8,
+    "grid_points": 100,
+    "source_condition": "mix0",
+    "shared_between_conditions": true
+  },
+  "uses_ground_truth": false
+}
