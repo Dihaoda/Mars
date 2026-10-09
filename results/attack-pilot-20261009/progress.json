@@ -1,10 +1,10 @@
 {
   "campaign": "attack-pilot-20261009",
-  "updated_utc": "2026-10-09T09:49:12.045509+00:00",
+  "updated_utc": "2026-10-09T10:05:23.112773+00:00",
   "source_hash": "2f155200c07ac92231e385817cdd272a33eec068f74acd3339d8578151ab1d73",
   "authorized_runs": 20,
   "completed_runs": 0,
-  "completed_rounds": 30,
+  "completed_rounds": 36,
   "total_rounds": 1000,
   "current": {
     "id": "hfedsa_ddpg-raw-none-seed2026",
@@ -14,19 +14,19 @@
     {
       "id": "hfedsa_ddpg-raw-none-seed2026",
       "status": "running",
-      "completed_rounds": 30,
+      "completed_rounds": 36,
       "total_rounds": 50,
       "config": "configs/planned/attack-pilot-20261009/hfedsa_ddpg-raw-none-seed2026.yaml",
       "last_validation": {
         "sst2": {
           "n": 64,
-          "accuracy": 0.875,
-          "loss": 0.19300572983411257
+          "accuracy": 0.90625,
+          "loss": 0.19943260433319665
         },
         "imdb": {
           "n": 64,
           "accuracy": 0.859375,
-          "loss": 0.19750011997530237
+          "loss": 0.2426933842652943
         }
       }
     },
