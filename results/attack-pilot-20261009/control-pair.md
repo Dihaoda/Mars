@@ -22,3 +22,5 @@
 本对照没有恶意客户端，TPR/recall、FNR、ROC-AUC 和后门 ASR 不适用。仅有一个训练种子且复用已观察的数据划分，不作显著性或普遍失败推断。在 FedAvg 等对照及攻击实验完成前，不能据此宣称两种表示均迁移失败，也不能证明抗攻击能力。
 
 [raw 完整结果](hfedsa_ddpg-raw-none-seed2026/summary.json) · [effective 完整结果](hfedsa_ddpg-effective-none-seed2026/summary.json) · [冻结协议](../../docs/attack-pilot-20261009.md)
+
+两组完整归档均已备份到本地并通过整个 ZIP 及逐文件 SHA-256 校验。回执：[raw](hfedsa_ddpg-raw-none-seed2026/local_backup_verification.json) · [effective](hfedsa_ddpg-effective-none-seed2026/local_backup_verification.json)。

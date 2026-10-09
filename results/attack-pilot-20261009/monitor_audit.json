@@ -1,6 +1,6 @@
 {
-  "checked_utc": "2026-10-09T12:59:01.020536+00:00",
-  "snapshot_utc": "2026-10-09T12:58:54.906344+00:00",
+  "checked_utc": "2026-10-09T13:06:21.818665+00:00",
+  "snapshot_utc": "2026-10-09T13:06:15.029867+00:00",
   "status": "pass",
   "source_hash": "2f155200c07ac92231e385817cdd272a33eec068f74acd3339d8578151ab1d73",
   "checks": [
@@ -22,7 +22,7 @@
     },
     {
       "id": "fedavg-effective-none-seed2026",
-      "verified_rounds": 2
+      "verified_rounds": 5
     }
   ],
   "note": "Integrity checks only; no final effectiveness conclusion from incomplete experiments."

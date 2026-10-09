@@ -1,0 +1,12 @@
+{
+  "run": "hfedsa_ddpg-effective-none-seed2026",
+  "sha256": "f178d93253fce245dac58d443970a32fecadc78d4ff92cb48dfae25e2e23b5ea",
+  "bytes": 626473498,
+  "archive_filename": "Mars-hfedsa_ddpg-effective-none-seed2026.zip",
+  "file_count": 156,
+  "all_file_hashes_verified": true,
+  "zip_crc_verified": true,
+  "completed_rounds": 50,
+  "local_copy_verified": true,
+  "verified_utc": "2026-10-09T13:08:48.754961+00:00"
+}
