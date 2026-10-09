@@ -1,8 +1,13 @@
 {
   "kind": "round_file_index",
-  "completed_rounds": 2,
+  "completed_rounds": 7,
   "files": [
     "rounds/round_001.json",
-    "rounds/round_002.json"
+    "rounds/round_002.json",
+    "rounds/round_003.json",
+    "rounds/round_004.json",
+    "rounds/round_005.json",
+    "rounds/round_006.json",
+    "rounds/round_007.json"
   ]
 }

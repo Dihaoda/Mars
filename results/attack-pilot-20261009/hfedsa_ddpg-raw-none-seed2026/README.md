@@ -21,4 +21,4 @@
 
 本项没有恶意阳性，TPR/recall、FNR、ROC-AUC 和后门 ASR 均不适用。仅有一个训练种子且复用已观察过的数据划分；500 个客户端轮次是相关观测，不是 500 次独立实验，不作显著性推断。本项为实际闭环训练，不是离线重放。
 
-完整数值见 [summary.json](summary.json)；逐轮记录见 [rounds.json](rounds.json)。完整服务器归档的大小和 SHA-256 见 [backup.json](backup.json)，本地下载核验回执在下载与逐文件校验通过后单独发布。控制器参数确实发生变化的核验见 [controller_learning_check.json](controller_learning_check.json)；这只证明发生了学习更新，不证明防御有效。
+完整数值见 [summary.json](summary.json)；逐轮记录见 [rounds.json](rounds.json)。完整归档为 626,567,249 字节，已下载至本地并通过整个 ZIP 的 SHA-256、CRC 和全部 156 个文件哈希校验，包含 50 轮原始更新、检查点、适配器、配置、数据及环境记录。服务器归档记录见 [backup.json](backup.json)，独立的本地核验回执见 [local_backup_verification.json](local_backup_verification.json)；服务器记录中的 `local_copy_verified: false` 表示服务器归档时尚未做本地校验，本地状态以独立回执为准。控制器参数确实发生变化的核验见 [controller_learning_check.json](controller_learning_check.json)；这只证明发生了学习更新，不证明防御有效。
