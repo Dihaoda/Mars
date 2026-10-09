@@ -1,0 +1,131 @@
+{
+  "identity": "def6b2b5ecb927df43197ccc81dc12cb8fd911c9835575aecf7a839a32fd45b6",
+  "code_commit": "1295755335fab22de9bb7ea29a16202397a730fa",
+  "config": {
+    "experiment": "indexguard-heterogeneity-20261009",
+    "seed": 2026,
+    "data_seed": 2026,
+    "rounds": 10,
+    "clients": 30,
+    "malicious_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "heterogeneous_ids": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "samples_per_client": 500,
+    "test_per_domain": 200,
+    "dirichlet_alpha": 0.3,
+    "mix_ratio": 0.4,
+    "poison_rate": 0.05,
+    "trigger": "I watched this 3D movie with my friends last Friday.",
+    "target_label": 1,
+    "data_revisions": {
+      "sst2": "8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb",
+      "imdb": "e6281661ce1c48d982bc483cf8a173c1bbeb5d31"
+    },
+    "data_dir": "data/indexguard-heterogeneity-20261009",
+    "run_dir": "runs/indexguard-heterogeneity-20261009",
+    "results_dir": "results/indexguard-heterogeneity-20261009",
+    "model": {
+      "backend": "huggingface",
+      "name": "/root/autodl-tmp/models/Llama-3.2-3B",
+      "revision": "48d84dd14886f01964f72e7f742a404dd86f9fb6",
+      "canonical_name": "meta-llama/Llama-3.2-3B",
+      "distribution": "LLM-Research/Llama-3.2-3B",
+      "dtype": "bfloat16",
+      "rank": 8,
+      "alpha": 128,
+      "dropout": 0.05,
+      "targets": [
+        "q_proj",
+        "v_proj"
+      ],
+      "max_length": 512,
+      "gradient_checkpointing": true
+    },
+    "runtime": {
+      "threads": 8,
+      "device": "cuda",
+      "deterministic": true
+    },
+    "train": {
+      "learning_rate": 0.0002,
+      "weight_decay": 0.01,
+      "betas": [
+        0.9,
+        0.99
+      ],
+      "local_epochs": 3,
+      "batch_size": 4,
+      "gradient_accumulation": 16,
+      "max_grad_norm": 1.0,
+      "warmup_ratio": 0.03
+    },
+    "detector": {
+      "clusters": 2,
+      "gamma": 0.05,
+      "beta": 0.7
+    },
+    "calibration": {
+      "resamples": 3,
+      "examples_per_resample": 64,
+      "coverage": 0.9,
+      "stability": 0.8,
+      "grid_points": 100,
+      "source_condition": "mix0",
+      "shared_between_conditions": true
+    }
+  },
+  "data_hashes": [
+    "4afe4841962e34598c64451e20a3feed63a181cab01d77418d69a0c98e4d4639",
+    "4c54ea77319eb06482e7d44fa1c640170ff68867fcbb93cad25987378e77797d"
+  ],
+  "source_files": {
+    "src/mars/__init__.py": "3ef585781390e915837397b87f06d615166c582ccbdf6c15c9bc12a2af3baead",
+    "src/mars/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "src/mars/adaptive_attack.py": "e8853892ffb9a13678f788d1664994dd8d49611729e856aa12bbeba50e6271cc",
+    "src/mars/attacks.py": "60271b5d2774074e85d4dd4d907afeff40708c344bdec237e7db43fa8769bcb4",
+    "src/mars/backend.py": "e1ac379be6ad27935517d8bf610df753642b792d01ba65f3b6ff8331fd09dcfb",
+    "src/mars/cli.py": "1a5a03d0edbae36bd88327ec98bdf0913e28a2c04ef755632f1e0e73e4d52fe1",
+    "src/mars/config.py": "529982fa8fe29a1985fd56c768c9b4691365641807160ec34ac956eafa9bbf26",
+    "src/mars/data.py": "7ed36c9d453122f722defee284df267c6b0df636c798d1f7b6da3aaade90d811",
+    "src/mars/defenses.py": "4fb3efd9e2739909effe506f753bc83f55016933566e38d671c4a91af8622c6f",
+    "src/mars/geometry.py": "eb6510d5005faca7b59692b8f99cdede6360196828c3e610194adbb7973039f1",
+    "src/mars/legacy_ddpg.py": "953f8753180540dfe907cb0cff17131181e3fa84f54e46e2d6bac022b94a9f9d",
+    "src/mars/legacy_hfedsa.py": "9ccbc3671c44acedf6fcddbbbfbdbc9f9f1b1880d041a06c848822eb554a500e",
+    "src/mars/legacy_tensor_ops.py": "0ce16a236491185b3c4d3b22c4f4b9e3be651556718c9fe0b3a682caeedada75",
+    "src/mars/metrics.py": "dc36cb08d42c3d5c8b8695200f1b7075c49b0a1c8f64003007681944a1a0e704",
+    "src/mars/report.py": "90e4d43630e421832b9b94150f9a6a32e40a04492ff1323246e172b8cbdde0c7",
+    "src/mars/runner.py": "72e960557c2f641ab527e8f456098eccf411a558d23c8f33a90295c8186756f7",
+    "src/mars/sampling.py": "ef585815b61fd9832ca6d0064be16d326b0294871539347fd879105a46a9661e",
+    "src/mars/utils.py": "80c64975333ec9ca649451163c14eaf10d16812521ce3bcb7b42ad97a362fc6d",
+    "src/mars/workone.py": "d1bf88550a759e29e6c4870968fa10a7cce597652758f26f195055ebb70bc139",
+    "experiments/indexguard/__init__.py": "9e04a31076fa245dbf1b69f01b670af68512db1dfebfe071abd5dbc6403dee71",
+    "experiments/indexguard/backend.py": "adb4b36fbcb94b3522b56bc709943663b3477e864d9cc5005661c67a37bc18ab",
+    "experiments/indexguard/data.py": "94a614b8fed7ab0ddb948b0407bf1a4175524c357bd85f46300cc4cd0550721b",
+    "experiments/indexguard/detector.py": "1aba87c123c4fb29c0ab683e77f78710823b587f43ea6e1515e9368fb7ae0053",
+    "experiments/indexguard/runner.py": "bd03661cb90b7a72e23c1c2d6718c05f6c2e1517cdfacd656bd3f35043c5b099"
+  },
+  "environment": {
+    "torch": "2.8.0+cu128",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "transformers": "4.52.4",
+    "peft": "0.15.2",
+    "datasets": "3.6.0",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "model_manifest_sha256": "b6fbde305030b44ce020dca90a6d665d348b5ed5486bc97fa7ddac8738b36886"
+}

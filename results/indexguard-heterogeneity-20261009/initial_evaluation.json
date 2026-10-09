@@ -1,0 +1,16 @@
+{
+  "sst2": {
+    "n": 200,
+    "accuracy": 0.885,
+    "loss": 4.667573189735412,
+    "asr_non_target": 0.11,
+    "asr_denominator": 100
+  },
+  "imdb": {
+    "n": 200,
+    "accuracy": 0.94,
+    "loss": 5.267596282958984,
+    "asr_non_target": 0.03,
+    "asr_denominator": 100
+  }
+}

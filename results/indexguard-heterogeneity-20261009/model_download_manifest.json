@@ -1,0 +1,68 @@
+{
+  "model": "meta-llama/Llama-3.2-3B",
+  "download_repository": "LLM-Research/Llama-3.2-3B",
+  "download_revision": "48d84dd14886f01964f72e7f742a404dd86f9fb6",
+  "source": "https://modelscope.cn/models/LLM-Research/Llama-3.2-3B",
+  "files": [
+    {
+      "Path": "LICENSE.txt",
+      "Size": 7712,
+      "Sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+    },
+    {
+      "Path": "README.md",
+      "Size": 35371,
+      "Sha256": "a34cf4a5265c6417b75bde0f6f767c9e69a702a9bbc80719e5b1c8d750a29ed4"
+    },
+    {
+      "Path": "USE_POLICY.md",
+      "Size": 6021,
+      "Sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+    },
+    {
+      "Path": "config.json",
+      "Size": 844,
+      "Sha256": "35f063e9f381e8678eea34bc56c3ecef3c6d10149f6b2cbdf27b8ee1bad3073d"
+    },
+    {
+      "Path": "configuration.json",
+      "Size": 2,
+      "Sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "Path": "generation_config.json",
+      "Size": 185,
+      "Sha256": "32f72ace91bc9105358abc8535a11407c87dd6ef740b4242d52d637b7ac76b49"
+    },
+    {
+      "Path": "model-00001-of-00002.safetensors",
+      "Size": 4965799096,
+      "Sha256": "584d8d3e3f82f7964955174dfe5e3b1cf117a9d859f022cfdf7fcb884856e002"
+    },
+    {
+      "Path": "model-00002-of-00002.safetensors",
+      "Size": 1459729952,
+      "Sha256": "4719a04514ec2f060240711b7c33ab21187cac730ecaba3040b7a0fd95a9cefb"
+    },
+    {
+      "Path": "model.safetensors.index.json",
+      "Size": 20919,
+      "Sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+    },
+    {
+      "Path": "special_tokens_map.json",
+      "Size": 301,
+      "Sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+    },
+    {
+      "Path": "tokenizer.json",
+      "Size": 9085657,
+      "Sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+    },
+    {
+      "Path": "tokenizer_config.json",
+      "Size": 50500,
+      "Sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+    }
+  ]
+}

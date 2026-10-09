@@ -1,0 +1,19 @@
+{
+  "not_research_evidence": true,
+  "test_file": "tests/test_indexguard.py",
+  "passed": 9,
+  "windows_pass_at_code_commit": "1295755335fab22de9bb7ea29a16202397a730fa",
+  "autodl_pass_at_code_commit": "ec8c6c74ab03977319e2bc7350c098ba5d9130ce",
+  "coverage": [
+    "no-forced-positive",
+    "cohesive-minority",
+    "exact-IOS",
+    "exclude-flagged-aggregation",
+    "semantic-metrics",
+    "K-selection",
+    "paired-data-and-poisoning",
+    "deterministic-local-training",
+    "interrupted-client-resume-and-identity-check"
+  ],
+  "real_llama_preflight": "preflight.json"
+}

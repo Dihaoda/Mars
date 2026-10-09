@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "not_research_evidence": true,
+  "training": {
+    "loss": 5.654519110918045,
+    "optimizer_steps": 1,
+    "answer_tokens": 128,
+    "seconds": 3.9402829725295305
+  },
+  "evaluation": {
+    "n": 4,
+    "accuracy": 1.0,
+    "loss": 2.899038791656494
+  },
+  "deterministic_replay": true,
+  "coordinate_dimension": 2293760,
+  "max_gpu_allocated_bytes": 6539697664
+}
