@@ -1,8 +1,8 @@
 {
   "stage": "training",
   "condition": "mix0",
-  "round": 1,
-  "client_completed": 7,
+  "round": 2,
+  "client_completed": 19,
   "clients": 30,
   "identity": "def6b2b5ecb927df43197ccc81dc12cb8fd911c9835575aecf7a839a32fd45b6"
 }
