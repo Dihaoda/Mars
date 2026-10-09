@@ -1,6 +1,6 @@
 # Mars 首阶段攻击实验进度
 
-更新时间（UTC）：2026-10-09T08:29:18.511975+00:00。已完成 0/20 项、0/1000 轮。
+更新时间（UTC）：2026-10-09T08:34:24.909218+00:00。已完成 0/20 项、1/1000 轮。
 
 所有结果均为 seed 2026、同一数据划分的探索性试验。未完成项不报告最终准确率；合成/缩步核验不计入研究结果。
 
@@ -8,7 +8,7 @@
 
 | 实验 | 状态 | 已完成轮数 | 第50轮干净准确率 | 后门 ASR |
 |---|---|---:|---:|---:|
-| hfedsa_ddpg-raw-none-seed2026 | pending | 0/50 | — | — |
+| hfedsa_ddpg-raw-none-seed2026 | running | 1/50 | — | — |
 | hfedsa_ddpg-effective-none-seed2026 | pending | 0/50 | — | — |
 | fedavg-effective-none-seed2026 | pending | 0/50 | — | — |
 | fltrust-effective-none-seed2026 | pending | 0/50 | — | — |
@@ -29,5 +29,5 @@
 | fltrust-effective-adaptive-seed2026 | pending | 0/50 | — | — |
 | rfa-effective-adaptive-seed2026 | pending | 0/50 | — | — |
 
-每轮客户端判定、权重及控制器轨迹保存在各实验的 rounds.json；完成后增加 summary.json、CSV 和备份清单。
+每轮客户端判定、权重及控制器轨迹保存在各实验的 rounds.json；完成后增加 summary.json 和备份清单；完整 CSV 随备份保存。
 二分类检测指标只适用于输出恶意后验的 H-FedSA 方法。其他方法记 NA。实例不会自动关机，队列不含后续种子或新方法。
