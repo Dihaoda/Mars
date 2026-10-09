@@ -1,0 +1,21 @@
+{
+  "checked_utc": "2026-10-09T08:53:57.883865+00:00",
+  "snapshot_utc": "2026-10-09T08:52:42.091495+00:00",
+  "status": "pass",
+  "source_hash": "2f155200c07ac92231e385817cdd272a33eec068f74acd3339d8578151ab1d73",
+  "checks": [
+    "source/config/data hashes",
+    "frozen paired sampling and role counts",
+    "full local optimizer steps",
+    "finite numerical records and nonnegative weights",
+    "DDPG replay and gradient update schedule",
+    "validation-only reward and no interim final-test results"
+  ],
+  "checked": [
+    {
+      "id": "hfedsa_ddpg-raw-none-seed2026",
+      "verified_rounds": 8
+    }
+  ],
+  "note": "Integrity checks only; no final effectiveness conclusion from incomplete experiments."
+}
