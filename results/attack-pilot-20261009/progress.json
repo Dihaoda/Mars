@@ -1,10 +1,10 @@
 {
   "campaign": "attack-pilot-20261009",
-  "updated_utc": "2026-10-09T13:06:15.029867+00:00",
+  "updated_utc": "2026-10-09T13:22:43.791538+00:00",
   "source_hash": "2f155200c07ac92231e385817cdd272a33eec068f74acd3339d8578151ab1d73",
   "authorized_runs": 20,
   "completed_runs": 2,
-  "completed_rounds": 105,
+  "completed_rounds": 112,
   "total_rounds": 1000,
   "current": {
     "id": "fedavg-effective-none-seed2026",
@@ -110,19 +110,19 @@
     {
       "id": "fedavg-effective-none-seed2026",
       "status": "running",
-      "completed_rounds": 5,
+      "completed_rounds": 12,
       "total_rounds": 50,
       "config": "configs/planned/attack-pilot-20261009/fedavg-effective-none-seed2026.yaml",
       "last_validation": {
         "sst2": {
           "n": 64,
-          "accuracy": 0.859375,
-          "loss": 0.19768702003057115
+          "accuracy": 0.875,
+          "loss": 0.1855341254704399
         },
         "imdb": {
           "n": 64,
           "accuracy": 0.859375,
-          "loss": 0.18048885959433392
+          "loss": 0.17340172466356307
         }
       }
     },

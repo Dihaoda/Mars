@@ -1,6 +1,6 @@
 # Mars 首阶段攻击实验进度
 
-更新时间（UTC）：2026-10-09T13:06:15.029867+00:00。已完成 2/20 项、105/1000 轮。
+更新时间（UTC）：2026-10-09T13:22:43.791538+00:00。已完成 2/20 项、112/1000 轮。
 
 所有结果均为 seed 2026、同一数据划分的探索性试验。未完成项不报告最终准确率；合成/缩步核验不计入研究结果。
 
@@ -10,7 +10,7 @@
 |---|---|---:|---:|---:|
 | [hfedsa_ddpg-raw-none-seed2026](hfedsa_ddpg-raw-none-seed2026/summary.json) | complete | 50/50 | 93.16% | — |
 | [hfedsa_ddpg-effective-none-seed2026](hfedsa_ddpg-effective-none-seed2026/summary.json) | complete | 50/50 | 93.55% | — |
-| fedavg-effective-none-seed2026 | running | 5/50 | — | — |
+| fedavg-effective-none-seed2026 | running | 12/50 | — | — |
 | fltrust-effective-none-seed2026 | pending | 0/50 | — | — |
 | rfa-effective-none-seed2026 | pending | 0/50 | — | — |
 | hfedsa_ddpg-raw-label_flip-seed2026 | pending | 0/50 | — | — |
