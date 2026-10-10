@@ -1,6 +1,6 @@
 {
   "status": "interim_not_final",
-  "generated_utc": "2026-10-10T03:25:14.077126+00:00",
+  "generated_utc": "2026-10-10T04:12:18.003624+00:00",
   "identity": "def6b2b5ecb927df43197ccc81dc12cb8fd911c9835575aecf7a839a32fd45b6",
   "training_seeds": [
     2026
@@ -488,42 +488,42 @@
       ]
     },
     "mix04": {
-      "completed_rounds": 8,
+      "completed_rounds": 9,
       "planned_rounds": 10,
       "pooled_client_round_detection": {
         "benign": {
           "flagged": 0,
-          "n": 144,
+          "n": 162,
           "rate": 0.0
         },
         "heterogeneous": {
           "flagged": 2,
-          "n": 48,
-          "rate": 0.041666666666666664
+          "n": 54,
+          "rate": 0.037037037037037035
         },
         "malicious": {
           "flagged": 0,
-          "n": 48,
+          "n": 54,
           "rate": 0.0
         }
       },
       "latest_evaluation": {
         "sst2": {
           "n": 200,
-          "accuracy": 0.965,
-          "loss": 0.0632834288920276,
-          "asr_non_target": 0.5,
+          "accuracy": 0.955,
+          "loss": 0.06611354357621167,
+          "asr_non_target": 0.73,
           "asr_denominator": 100
         },
         "imdb": {
           "n": 200,
           "accuracy": 0.97,
-          "loss": 0.03182086383079877,
+          "loss": 0.03270863419340458,
           "asr_non_target": 0.04,
           "asr_denominator": 100
         }
       },
-      "mean_round_seconds": 2527.5130319064483,
+      "mean_round_seconds": 2528.136316780001,
       "round_records": [
         {
           "round": 1,
@@ -876,49 +876,93 @@
               "asr_denominator": 100
             }
           }
+        },
+        {
+          "round": 9,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.955,
+              "loss": 0.06611354357621167,
+              "asr_non_target": 0.73,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.97,
+              "loss": 0.03270863419340458,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
         }
       ]
     }
   },
-  "available_paired_rounds": 8,
+  "available_paired_rounds": 9,
   "available_pair_checks": "pass",
   "matched_prefix_detection": {
     "mix0": {
       "benign": {
         "flagged": 0,
-        "n": 144,
+        "n": 162,
         "rate": 0.0
       },
       "heterogeneous": {
         "flagged": 0,
-        "n": 48,
+        "n": 54,
         "rate": 0.0
       },
       "malicious": {
         "flagged": 0,
-        "n": 48,
+        "n": 54,
         "rate": 0.0
       }
     },
     "mix04": {
       "benign": {
         "flagged": 0,
-        "n": 144,
+        "n": 162,
         "rate": 0.0
       },
       "heterogeneous": {
         "flagged": 2,
-        "n": 48,
-        "rate": 0.041666666666666664
+        "n": 54,
+        "rate": 0.037037037037037035
       },
       "malicious": {
         "flagged": 0,
-        "n": 48,
+        "n": 54,
         "rate": 0.0
       }
     }
   },
-  "matched_prefix_h_fpr_difference": 0.041666666666666664,
+  "matched_prefix_h_fpr_difference": 0.037037037037037035,
   "initial_evaluation": {
     "sst2": {
       "n": 200,
@@ -953,7 +997,8 @@
     "mix04/round_005.json": "42f1365c1b0b71c4d72d1d5e960b02671534c48d45eccd52946ffb4878ea2a3c",
     "mix04/round_006.json": "b3a1343ab4e0ebbf1726bf3eb565404cfa6762bfdfabcdf253443a93a879e3cc",
     "mix04/round_007.json": "cb1e35e344d85f750e28ecea24d402c7ec60740a59ab5d968a826fd0fe32ef72",
-    "mix04/round_008.json": "759ccea471bf2718a6dd039cd03870adfc110d9a4753e4fb5608a59f464b9953"
+    "mix04/round_008.json": "759ccea471bf2718a6dd039cd03870adfc110d9a4753e4fb5608a59f464b9953",
+    "mix04/round_009.json": "5f5f57b48eaeee51af45c27f59558287489eed8251635ae9d63d4652b5b0b12e"
   },
   "limitations": [
     "Interim snapshot: the pre-specified 10-round paired comparison is incomplete.",
