@@ -24,6 +24,7 @@ def pooled(values):
     return output
 
 paired_count = min(map(len, rounds.values()))
+training_complete = all(len(values) == cfg['rounds'] for values in rounds.values())
 for a, b in zip(rounds['mix0'], rounds['mix04']):
     assert a['round'] == b['round'] and a['k'] == b['k']
     assert [x['id'] for x in a['clients']] == [x['id'] for x in b['clients']] == list(range(cfg['clients']))
@@ -50,21 +51,24 @@ report = {'status': 'interim_not_final', 'generated_utc': datetime.now(timezone.
           'initial_evaluation': read(root/'initial_evaluation.json'),
           'inputs_sha256': {p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
                            for name in rounds for p in sorted((root/name).glob('round_*.json'))},
-          'limitations': ['Interim snapshot: the pre-specified 10-round paired comparison is incomplete.',
+          'limitations': [('Training complete; full local archive verification and final paired analysis are pending.'
+                           if training_complete else 'Interim snapshot: the pre-specified 10-round paired comparison is incomplete.'),
                           'One seed and one shared data split; client-rounds are correlated.',
                           'No independent unfiltered attack control; low ASR is not defense success.',
                           'Paper-formula implementation with disclosed choices, not exact reproduction of the published tables.',
                           'All completed rounds retained; no tuning or outcome-based selection.']}
 (root/'interim_summary.json').write_text(json.dumps(report, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
 lines = ['# IndexGuard 配对预实验：阶段记录', '',
-         '这是尚未完成的快照；正式结论须等待两组各 10 轮、本地完整归档验证和最终配对核验。', '',
+         ('两组训练均已完成 10 轮；本页仍是阶段记录，正式结论须等待本地完整归档验证和最终配对分析。'
+          if training_complete else '这是尚未完成的快照；正式结论须等待两组各 10 轮、本地完整归档验证和最终配对核验。'), '',
          '| 条件 | 完成轮次 | 指定 H 组误报 | 普通良性误报 | 恶意检出 | 最新 SST-2 准确率 | 最新 SST-2 ASR |',
          '|---|---:|---:|---:|---:|---:|---:|']
 for name, info in summary.items():
     d, e = info['pooled_client_round_detection'], info['latest_evaluation']['sst2']
     cells = [f"{d[role]['flagged']}/{d[role]['n']} ({d[role]['rate']:.2%})" for role in ['heterogeneous', 'benign', 'malicious']]
     lines.append(f"| {name} | {info['completed_rounds']}/10 | {' | '.join(cells)} | {e['accuracy']:.2%} | {e['asr_non_target']:.2%} |")
-lines += ['', '两行的最新测试结果来自不同轮次，不能当作最终配对对照。mix0 中 H 组只是相同客户端 ID 的对照，尚未替换 IMDB 数据。', '',
+lines += ['', ('两行测试结果均来自第 10 轮。' if training_complete else '两行的最新测试结果来自不同轮次，不能当作最终配对对照。')
+          + 'mix0 中 H 组只是相同客户端 ID 的对照，尚未替换 IMDB 数据。', '',
           f"当前可配对的前 {paired_count} 轮通过参与 ID、角色、投毒位置、共享 K、首轮初始化及未干预客户端首轮适配器哈希核验。该共同前缀 H-FPR 差值为 {report['matched_prefix_h_fpr_difference']*100:+.2f} 个百分点，只是阶段描述。", '',
           '逐轮有误报的记录：']
 for name, values in rounds.items():

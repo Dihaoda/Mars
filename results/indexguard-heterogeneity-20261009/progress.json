@@ -1,8 +1,8 @@
 {
-  "stage": "training",
-  "condition": "mix04",
-  "round": 10,
-  "client_completed": 4,
-  "clients": 30,
-  "identity": "def6b2b5ecb927df43197ccc81dc12cb8fd911c9835575aecf7a839a32fd45b6"
+  "stage": "complete",
+  "identity": "def6b2b5ecb927df43197ccc81dc12cb8fd911c9835575aecf7a839a32fd45b6",
+  "conditions": [
+    "mix0",
+    "mix04"
+  ]
 }
