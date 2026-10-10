@@ -1,0 +1,875 @@
+{
+  "status": "interim_not_final",
+  "generated_utc": "2026-10-10T02:05:06.619152+00:00",
+  "identity": "def6b2b5ecb927df43197ccc81dc12cb8fd911c9835575aecf7a839a32fd45b6",
+  "training_seeds": [
+    2026
+  ],
+  "data_splits": 1,
+  "conditions": {
+    "mix0": {
+      "completed_rounds": 10,
+      "planned_rounds": 10,
+      "pooled_client_round_detection": {
+        "benign": {
+          "flagged": 0,
+          "n": 180,
+          "rate": 0.0
+        },
+        "heterogeneous": {
+          "flagged": 0,
+          "n": 60,
+          "rate": 0.0
+        },
+        "malicious": {
+          "flagged": 0,
+          "n": 60,
+          "rate": 0.0
+        }
+      },
+      "latest_evaluation": {
+        "sst2": {
+          "n": 200,
+          "accuracy": 0.955,
+          "loss": 0.06816727804194671,
+          "asr_non_target": 0.9,
+          "asr_denominator": 100
+        },
+        "imdb": {
+          "n": 200,
+          "accuracy": 0.975,
+          "loss": 0.03926387069339398,
+          "asr_non_target": 0.06,
+          "asr_denominator": 100
+        }
+      },
+      "mean_round_seconds": 2429.4356883544474,
+      "round_records": [
+        {
+          "round": 1,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.95,
+              "loss": 0.06518601232208311,
+              "asr_non_target": 0.02,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.96,
+              "loss": 0.05910688912321348,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 2,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.955,
+              "loss": 0.059442767165601255,
+              "asr_non_target": 0.03,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.975,
+              "loss": 0.041634774359408766,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 3,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.96,
+              "loss": 0.056294706321205014,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.965,
+              "loss": 0.04541736484869034,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 4,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.97,
+              "loss": 0.055953518816968424,
+              "asr_non_target": 0.06,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.975,
+              "loss": 0.04034752264036797,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 5,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.955,
+              "loss": 0.06029026638047071,
+              "asr_non_target": 0.09,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.97,
+              "loss": 0.03990680114395218,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 6,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.97,
+              "loss": 0.05855533015506808,
+              "asr_non_target": 0.2,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.98,
+              "loss": 0.038521751536172814,
+              "asr_non_target": 0.05,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 7,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.95,
+              "loss": 0.06834993562515593,
+              "asr_non_target": 0.41,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.98,
+              "loss": 0.04165849826938938,
+              "asr_non_target": 0.05,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 8,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.955,
+              "loss": 0.06375800090550911,
+              "asr_non_target": 0.54,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.97,
+              "loss": 0.039083932487701534,
+              "asr_non_target": 0.05,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 9,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.955,
+              "loss": 0.06691908694629092,
+              "asr_non_target": 0.83,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.98,
+              "loss": 0.04108420849661343,
+              "asr_non_target": 0.06,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 10,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.955,
+              "loss": 0.06816727804194671,
+              "asr_non_target": 0.9,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.975,
+              "loss": 0.03926387069339398,
+              "asr_non_target": 0.06,
+              "asr_denominator": 100
+            }
+          }
+        }
+      ]
+    },
+    "mix04": {
+      "completed_rounds": 6,
+      "planned_rounds": 10,
+      "pooled_client_round_detection": {
+        "benign": {
+          "flagged": 0,
+          "n": 108,
+          "rate": 0.0
+        },
+        "heterogeneous": {
+          "flagged": 2,
+          "n": 36,
+          "rate": 0.05555555555555555
+        },
+        "malicious": {
+          "flagged": 0,
+          "n": 36,
+          "rate": 0.0
+        }
+      },
+      "latest_evaluation": {
+        "sst2": {
+          "n": 200,
+          "accuracy": 0.97,
+          "loss": 0.06044834610802354,
+          "asr_non_target": 0.19,
+          "asr_denominator": 100
+        },
+        "imdb": {
+          "n": 200,
+          "accuracy": 0.975,
+          "loss": 0.030295212196942884,
+          "asr_non_target": 0.03,
+          "asr_denominator": 100
+        }
+      },
+      "mean_round_seconds": 2525.772018789003,
+      "round_records": [
+        {
+          "round": 1,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 2,
+              "rate": 0.3333333333333333
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 2,
+            "tn": 22,
+            "fpr": 0.08333333333333333,
+            "tpr": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.95,
+              "loss": 0.08280265052089816,
+              "asr_non_target": 0.01,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.955,
+              "loss": 0.06191490268698544,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 2,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.95,
+              "loss": 0.057948230397887525,
+              "asr_non_target": 0.03,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.97,
+              "loss": 0.04035921216767747,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 3,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.955,
+              "loss": 0.061956870560825335,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.97,
+              "loss": 0.04103405884365202,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 4,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.965,
+              "loss": 0.057888987100450325,
+              "asr_non_target": 0.09,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.98,
+              "loss": 0.03508690186834428,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 5,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.955,
+              "loss": 0.06081708786805393,
+              "asr_non_target": 0.14,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.975,
+              "loss": 0.03281832112086704,
+              "asr_non_target": 0.03,
+              "asr_denominator": 100
+            }
+          }
+        },
+        {
+          "round": 6,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.97,
+              "loss": 0.06044834610802354,
+              "asr_non_target": 0.19,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.975,
+              "loss": 0.030295212196942884,
+              "asr_non_target": 0.03,
+              "asr_denominator": 100
+            }
+          }
+        }
+      ]
+    }
+  },
+  "available_paired_rounds": 6,
+  "available_pair_checks": "pass",
+  "matched_prefix_detection": {
+    "mix0": {
+      "benign": {
+        "flagged": 0,
+        "n": 108,
+        "rate": 0.0
+      },
+      "heterogeneous": {
+        "flagged": 0,
+        "n": 36,
+        "rate": 0.0
+      },
+      "malicious": {
+        "flagged": 0,
+        "n": 36,
+        "rate": 0.0
+      }
+    },
+    "mix04": {
+      "benign": {
+        "flagged": 0,
+        "n": 108,
+        "rate": 0.0
+      },
+      "heterogeneous": {
+        "flagged": 2,
+        "n": 36,
+        "rate": 0.05555555555555555
+      },
+      "malicious": {
+        "flagged": 0,
+        "n": 36,
+        "rate": 0.0
+      }
+    }
+  },
+  "matched_prefix_h_fpr_difference": 0.05555555555555555,
+  "initial_evaluation": {
+    "sst2": {
+      "n": 200,
+      "accuracy": 0.885,
+      "loss": 4.667573189735412,
+      "asr_non_target": 0.11,
+      "asr_denominator": 100
+    },
+    "imdb": {
+      "n": 200,
+      "accuracy": 0.94,
+      "loss": 5.267596282958984,
+      "asr_non_target": 0.03,
+      "asr_denominator": 100
+    }
+  },
+  "inputs_sha256": {
+    "mix0/round_001.json": "5acd734f4a4f0a93aab8ca26931cb23c8caef71af9fb16607f74286acafe56f9",
+    "mix0/round_002.json": "eab6f6713d08c1ba0f5892eb8f4306992c5bb672dd90fdd1f0256d825d45cc1a",
+    "mix0/round_003.json": "9be72972d94ea0a8008d4453ee2bf22fca05aafc1a5d22f1dc3c93a2ec523493",
+    "mix0/round_004.json": "f42657e88f793c2c6b0c96eb16ff06ba697aca2d68f961c0900cbc58cc49860c",
+    "mix0/round_005.json": "fc3432ac16c22d424194d6a4f0160dd9f032a4d9a8cae83f42dba9da54214120",
+    "mix0/round_006.json": "3038b3039960fab57ee070b450529e20f69957f7d2f3e52385702b1dd44f02c9",
+    "mix0/round_007.json": "783e1cc81d4473b15496b0855e1a8c7d00f48a952c7e1d6ce280b6d0e740673b",
+    "mix0/round_008.json": "7a336b8f1190f5ac0e4e6ddd824a32d6c205f4d37e44864c3041c689e9d32628",
+    "mix0/round_009.json": "0e78187335c5760a663f1d9b48437d00ca7e59a954ea34b8717c721c8c90033a",
+    "mix0/round_010.json": "0c5f4d5bf127f164881495e6b77bc99e0d03f230cfac8fcdf1898f80607fd666",
+    "mix04/round_001.json": "6b330f320c46df50c87973d15443e1b4dff03822a6de7553c705be1daac37680",
+    "mix04/round_002.json": "96dd7e61bd8291537af40adc7d80bb3782c59de4cc4784b87f70a8f2a1a0f6b4",
+    "mix04/round_003.json": "1640e49db7e8d37d7a04405fdf444f356de48f48a83d05d3abe1f39666e4d18b",
+    "mix04/round_004.json": "74187ed11bcaf82ded385171099f1397ca7bd000f6c5dc59bf5b8dea9be56c9b",
+    "mix04/round_005.json": "42f1365c1b0b71c4d72d1d5e960b02671534c48d45eccd52946ffb4878ea2a3c",
+    "mix04/round_006.json": "b3a1343ab4e0ebbf1726bf3eb565404cfa6762bfdfabcdf253443a93a879e3cc"
+  },
+  "limitations": [
+    "Interim snapshot: the pre-specified 10-round paired comparison is incomplete.",
+    "One seed and one shared data split; client-rounds are correlated.",
+    "No independent unfiltered attack control; low ASR is not defense success.",
+    "Paper-formula implementation with disclosed choices, not exact reproduction of the published tables.",
+    "All completed rounds retained; no tuning or outcome-based selection."
+  ]
+}
