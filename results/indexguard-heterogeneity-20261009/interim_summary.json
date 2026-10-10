@@ -1,6 +1,6 @@
 {
   "status": "interim_not_final",
-  "generated_utc": "2026-10-10T02:05:06.619152+00:00",
+  "generated_utc": "2026-10-10T02:47:30.998604+00:00",
   "identity": "def6b2b5ecb927df43197ccc81dc12cb8fd911c9835575aecf7a839a32fd45b6",
   "training_seeds": [
     2026
@@ -488,42 +488,42 @@
       ]
     },
     "mix04": {
-      "completed_rounds": 6,
+      "completed_rounds": 7,
       "planned_rounds": 10,
       "pooled_client_round_detection": {
         "benign": {
           "flagged": 0,
-          "n": 108,
+          "n": 126,
           "rate": 0.0
         },
         "heterogeneous": {
           "flagged": 2,
-          "n": 36,
-          "rate": 0.05555555555555555
+          "n": 42,
+          "rate": 0.047619047619047616
         },
         "malicious": {
           "flagged": 0,
-          "n": 36,
+          "n": 42,
           "rate": 0.0
         }
       },
       "latest_evaluation": {
         "sst2": {
           "n": 200,
-          "accuracy": 0.97,
-          "loss": 0.06044834610802354,
-          "asr_non_target": 0.19,
+          "accuracy": 0.955,
+          "loss": 0.06843798875517677,
+          "asr_non_target": 0.37,
           "asr_denominator": 100
         },
         "imdb": {
           "n": 200,
           "accuracy": 0.975,
-          "loss": 0.030295212196942884,
-          "asr_non_target": 0.03,
+          "loss": 0.03366679342434509,
+          "asr_non_target": 0.04,
           "asr_denominator": 100
         }
       },
-      "mean_round_seconds": 2525.772018789003,
+      "mean_round_seconds": 2526.375472459942,
       "round_records": [
         {
           "round": 1,
@@ -788,49 +788,93 @@
               "asr_denominator": 100
             }
           }
+        },
+        {
+          "round": 7,
+          "detection": {
+            "benign": {
+              "n": 18,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "heterogeneous": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "malicious": {
+              "n": 6,
+              "flagged": 0,
+              "rate": 0.0
+            },
+            "tp": 0,
+            "fn": 6,
+            "fp": 0,
+            "tn": 24,
+            "fpr": 0.0,
+            "tpr": 0.0,
+            "precision": null,
+            "f1": 0.0
+          },
+          "evaluation": {
+            "sst2": {
+              "n": 200,
+              "accuracy": 0.955,
+              "loss": 0.06843798875517677,
+              "asr_non_target": 0.37,
+              "asr_denominator": 100
+            },
+            "imdb": {
+              "n": 200,
+              "accuracy": 0.975,
+              "loss": 0.03366679342434509,
+              "asr_non_target": 0.04,
+              "asr_denominator": 100
+            }
+          }
         }
       ]
     }
   },
-  "available_paired_rounds": 6,
+  "available_paired_rounds": 7,
   "available_pair_checks": "pass",
   "matched_prefix_detection": {
     "mix0": {
       "benign": {
         "flagged": 0,
-        "n": 108,
+        "n": 126,
         "rate": 0.0
       },
       "heterogeneous": {
         "flagged": 0,
-        "n": 36,
+        "n": 42,
         "rate": 0.0
       },
       "malicious": {
         "flagged": 0,
-        "n": 36,
+        "n": 42,
         "rate": 0.0
       }
     },
     "mix04": {
       "benign": {
         "flagged": 0,
-        "n": 108,
+        "n": 126,
         "rate": 0.0
       },
       "heterogeneous": {
         "flagged": 2,
-        "n": 36,
-        "rate": 0.05555555555555555
+        "n": 42,
+        "rate": 0.047619047619047616
       },
       "malicious": {
         "flagged": 0,
-        "n": 36,
+        "n": 42,
         "rate": 0.0
       }
     }
   },
-  "matched_prefix_h_fpr_difference": 0.05555555555555555,
+  "matched_prefix_h_fpr_difference": 0.047619047619047616,
   "initial_evaluation": {
     "sst2": {
       "n": 200,
@@ -863,7 +907,8 @@
     "mix04/round_003.json": "1640e49db7e8d37d7a04405fdf444f356de48f48a83d05d3abe1f39666e4d18b",
     "mix04/round_004.json": "74187ed11bcaf82ded385171099f1397ca7bd000f6c5dc59bf5b8dea9be56c9b",
     "mix04/round_005.json": "42f1365c1b0b71c4d72d1d5e960b02671534c48d45eccd52946ffb4878ea2a3c",
-    "mix04/round_006.json": "b3a1343ab4e0ebbf1726bf3eb565404cfa6762bfdfabcdf253443a93a879e3cc"
+    "mix04/round_006.json": "b3a1343ab4e0ebbf1726bf3eb565404cfa6762bfdfabcdf253443a93a879e3cc",
+    "mix04/round_007.json": "cb1e35e344d85f750e28ecea24d402c7ec60740a59ab5d968a826fd0fe32ef72"
   },
   "limitations": [
     "Interim snapshot: the pre-specified 10-round paired comparison is incomplete.",
